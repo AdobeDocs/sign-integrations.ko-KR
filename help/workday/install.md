@@ -12,7 +12,7 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 8f12b524-2123-45d4-98d5-b2b23580a5ea
-source-git-commit: ba5e0fccfdb7cd278cc0ae57dc03da1e17b51577
+source-git-commit: 78d6cafa720b41bd638c2ef723b2d4a2def19cd5
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 19%
@@ -170,7 +170,7 @@ Adobe Sign은 통합 파트너로서, 통합 과정에서 서명을 받지 못�
 Adobe Sign 고객은 담당 고객 성공 관리자(CSM)에게 지원을 요청해야 합니다. 또는 Adobe 기술 지원(전화: 1-866-318-4100)에 전화하여 제품 목록이 나오면 4번에 이어 2번(전화 안내에 따라)을 누르면 됩니다.
 
 * [문서에 Adobe 텍스트 태그 추가](https://adobe.com/go/adobesign_text_tag_guide)
-* [문서 구성 및 예제 검토](https://www.adobe.com/go/adobesign_workday_quick_start)
+* [문서 구성 및 예제 검토](https://www.adobe.com//go/adobesign_workday_quick_start)
 
 ## 일반적인 질문 {#faq}
 
