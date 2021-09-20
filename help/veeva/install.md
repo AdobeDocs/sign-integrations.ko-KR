@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 63a34c2d77ba7a262670da624c86a3730de0fdc5
+source-git-commit: d8b7271cae9bcbe8b66311eba0317b8937ea855c
 workflow-type: tm+mt
-source-wordcount: '2772'
+source-wordcount: '2839'
 ht-degree: 2%
 
 ---
@@ -24,6 +24,16 @@ ht-degree: 2%
 ## 개요 {#overview}
 
 이 문서에서는 [!DNL Veeva Vault] 플랫폼과 Adobe Sign의 통합을 설정하는 방법에 대해 설명합니다. [!DNL Veeva Vault] 생명 과학을 위해 구축된 ECM(엔터프라이즈 컨텐츠 관리) 플랫폼입니다. &quot;저장소&quot;는 규정 자료 작성, 연구 보고, 응용 프로그램 승인, 일반 계약 등에 사용되는 일반적인 컨텐츠 및 데이터 저장소입니다. 단일 기업에는 별도로 관리해야 하는 &#39;저장소&#39;가 여러 개 있을 수 있습니다.
+
+통합을 완료하는 상위 단계는 다음과 같습니다.
+
+* Adobe Sign에서 관리 계정 활성화(신규 고객만 해당)
+* 객체를 생성하여 저장소에서 계약 수명 주기의 기록을 추적합니다.
+* 새 보안 프로필을 만듭니다.
+* [!DNL Veeva Vault] 통합 사용자를 보유하도록 Adobe Sign에서 그룹을 구성합니다.
+* 문서 필드 및 변환을 만듭니다.
+* 웹 작업을 구성하고 문서 주기를 업데이트합니다.
+* 문서 유형 사용자 및 사용자 역할 설정을 만듭니다.
 
 ## 구성 [!DNL Veeva Vault]
 

@@ -12,7 +12,7 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: beafe6c0-262f-4f5b-9315-a023a4eef4a2
-source-git-commit: d462ccf41fa5483cfa02f5eaf154c23f26157a1e
+source-git-commit: ba5e0fccfdb7cd278cc0ae57dc03da1e17b51577
 workflow-type: tm+mt
 source-wordcount: '998'
 ht-degree: 29%
@@ -163,6 +163,6 @@ Adobe Sign 고객은 담당 고객 성공 관리자(CSM)에게 지원을 요청�
 
 * [문서에 Adobe 텍스트 태그 추가하기](https://adobe.com/go/adobesign_text_tag_guide)
 
-* [문서 구성 및 예제 검토](https://experienceleague.adobe.com/docs/dc-sign-integrations/using/workday/quick-start.html)
+* [문서 구성 및 예제 검토](https://www.adobe.com/go/adobesign_workday_quick_start)
 
 [**Adobe Sign 지원 문의**](https://adobe.com/go/adobesign-support-center_kr)
