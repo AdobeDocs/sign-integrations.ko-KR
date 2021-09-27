@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 3f826e88969562a69279a29dfdd98775ec01fd51
+source-git-commit: c25be043b404e9bf7a90496d4e47c1f22069313d
 workflow-type: tm+mt
-source-wordcount: '3061'
+source-wordcount: '3043'
 ht-degree: 2%
 
 ---
@@ -122,7 +122,7 @@ Adobe Sign 통합 프로세스를 잠그기 위해 Process Locker 개체가 만�
 
 ![서명 이벤트 세부 정보 이미지](images/security-profiles.png)
 
-Vault에서 Adobe Sign History에 액세스해야 하는 사용자의 모든 보안 프로필에는 서명, 서명자 및 서명 이벤트 개체에 대한 읽기 권한이 있어야 합니다.
+Vault에서 Adobe Sign 내역에 액세스해야 하는 사용자의 보안 프로파일에는 서명, 서명자 및 서명 이벤트 객체에 대한 읽기 권한이 있어야 합니다.
 
 ![서명 이벤트 세부 정보 이미지](images/set-permissions.png)
 
@@ -214,7 +214,7 @@ Adobe 서명 계약 주기의 상태는 다음과 같습니다.
 * 취소됨
 * 만료됨
 
-Vault 문서를 Adobe Sign으로 보낼 때 해당 상태는 계약의 상태와 일치해야 합니다. 이 작업은 Adobe Signature에 적합한 문서에서 사용하는 모든 주기에 다음 상태를 추가하여 수행됩니다.
+Vault 문서를 Adobe Sign으로 보낼 때 해당 상태는 계약의 상태와 일치해야 합니다. 이렇게 하려면 Adobe 서명에 적합한 문서에서 사용하는 모든 주기에 다음 상태를 추가합니다.
 
 * **Adobe 서명** (검토됨) 이전: 문서를 Adobe Sign으로 보낼 수 있는 상태의 자리 표시자 이름입니다. 문서 유형에 따라 초안 상태 또는 검토됨이 될 수 있습니다. 문서 상태 레이블은 고객의 요구 사항에 따라 사용자 정의할 수 있습니다. Adobe Signature 상태가 다음 두 가지 사용자 작업을 정의하려면 먼저 다음을 수행합니다.
 
@@ -229,7 +229,7 @@ Vault 문서를 Adobe Sign으로 보낼 때 해당 상태는 계약의 상태와
    * 문서의 상태를 *Adobe 서명 상태*&#x200B;로 변경하는 작업입니다. 이 사용자 작업의 이름은 모든 주기의 모든 문서 유형에 대해 동일해야 합니다. 필요한 경우 이 작업의 조건을 &quot;Adobe Sign 사용자 작업 허용(Allow Adobe Sign user actions equals eques Yes)&quot;으로 설정할 수 있습니다.
    * 문서의 상태를 *Adobe Sign Cancelled* 상태로 변경하는 작업입니다. 이 사용자 작업의 이름은 모든 주기의 모든 문서 유형에 대해 동일해야 합니다. 필요한 경우 이 작업의 조건을 &quot;Adobe Sign 사용자 작업 허용(Allow Adobe Sign user actions equals eques Yes)&quot;으로 설정할 수 있습니다.
    * 웹 작업 &#39;Adobe Sign&#39;을 호출하는 작업입니다.
-   * 웹 작업을 &#39;Adobe 서명 취소&#39;라고 부르는 작업입니다. Adobe Sign Admin 역할을 수행할 수 있도록 이 상태에는 보안이 있어야 합니다. 문서 보기, 콘텐츠 보기, 필드 편집, 관계 편집, 원본 다운로드, 보기가능 변환 관리 및 상태 변경
+   * 웹 작업을 &#39;Adobe 서명 취소&#39;라고 부르는 작업입니다. 이 상태에는 Adobe Sign Admin 역할을 수행할 수 있는 보안이 있어야 합니다. 문서 보기, 콘텐츠 보기, 필드 편집, 관계 편집, 원본 다운로드, 보기가능 변환 관리 및 상태 변경
 
    ![주기 상태 2 이미지](images/lifecycle-state2.png)
 
@@ -238,7 +238,7 @@ Vault 문서를 Adobe Sign으로 보낼 때 해당 상태는 계약의 상태와
    * 문서의 상태를 Adobe 서명 취소 상태로 변경하는 작업입니다. 이 사용자 작업의 이름은 주기에 관계없이 모든 문서 유형에 대해 동일해야 합니다. 필요한 경우 이 작업의 조건을 &quot;Adobe Sign 사용자 작업 허용(Allow Adobe Sign user actions equals eques Yes)&quot;으로 설정할 수 있습니다.
    * 문서의 상태를 Adobe 서명 상태로 변경하는 작업입니다. 이 사용자 작업의 이름은 주기에 관계없이 모든 문서 유형에 대해 동일해야 합니다. 필요한 경우 이 작업의 조건을 &quot;Adobe Sign 사용자 작업 허용(Allow Adobe Sign user actions equals eques Yes)&quot;으로 설정할 수 있습니다.
    * 웹 작업 &#39;Adobe Sign&#39;을 호출하는 동작
-   * 웹 작업을 &#39;Adobe 서명 취소&#39;라고 부르는 작업입니다. Adobe Sign Admin 역할을 수행할 수 있도록 이 상태에는 보안이 있어야 합니다. 문서 보기, 콘텐츠 보기, 필드 편집, 관계 편집, 원본 다운로드, 보기가능 변환 관리 및 상태 변경
+   * 웹 작업을 &#39;Adobe 서명 취소&#39;라고 부르는 작업입니다. 이 상태에는 Adobe Sign Admin 역할을 수행할 수 있는 보안이 있어야 합니다. 문서 보기, 콘텐츠 보기, 필드 편집, 관계 편집, 원본 다운로드, 보기가능 변환 관리 및 상태 변경
 
    ![주기 상태 3 이미지](images/lifecycle-state3.png)
 
@@ -248,7 +248,7 @@ Vault 문서를 Adobe Sign으로 보낼 때 해당 상태는 계약의 상태와
    * 문서의 상태를 Adobe [서명 거부] 상태로 변경하는 작업입니다. 이 작업의 대상 상태는 고객 요구 사항이 무엇이든 될 수 있으며 다른 유형에 따라 다를 수 있습니다. 이 사용자 작업의 이름은 주기에 관계없이 모든 문서 유형에 대해 동일해야 합니다. 필요한 경우 이 작업의 조건을 &quot;Adobe Sign 사용자 작업 허용(Allow Adobe Sign user actions equals eques Yes)&quot;으로 설정할 수 있습니다.
    * 문서의 상태를 Adobe 서명 상태로 변경하는 작업입니다. 이 작업의 대상 상태는 고객 요구 사항이 무엇이든 될 수 있으며 다른 유형에 따라 다를 수 있습니다. 그러나 이 사용자 작업의 이름은 주기에 관계없이 모든 문서 유형에 대해 동일해야 합니다. 필요한 경우 이 작업의 조건을 &quot;Adobe Sign 사용자 작업 허용(Allow Adobe Sign user actions equals eques Yes)&quot;으로 설정할 수 있습니다.
    * 웹 작업 *Adobe Sign*&#x200B;을 호출하는 작업입니다.
-   * Web Action *Adobe Sign* 취소를 호출하는 작업입니다. Adobe Sign Admin 역할을 수행할 수 있도록 이 상태에는 보안이 있어야 합니다. 문서 보기, 콘텐츠 보기, 필드 편집, 관계 편집, 원본 다운로드, 보기가능 변환 관리 및 상태 변경
+   * Web Action *Adobe Sign* 취소를 호출하는 작업입니다. 이 상태에는 Adobe Sign Admin 역할을 수행할 수 있는 보안이 있어야 합니다. 문서 보기, 콘텐츠 보기, 필드 편집, 관계 편집, 원본 다운로드, 보기가능 변환 관리 및 상태 변경
 
    ![주기 상태 4 이미지](images/lifecycle-state4.png)
 
@@ -286,7 +286,7 @@ Vault 문서를 Adobe Sign으로 보낼 때 해당 상태는 계약의 상태와
 Adobe Sign 계정 관리자는 미들웨어를 사용하여 [!DNL Veeva Vault]을 Adobe Sign에 연결하려면 다음 단계를 따라야 합니다.
 
 1. [Adobe Sign forHome  [!DNL Veeva Vault] 페이지로](https://static.adobesigncdn.com/veevavaultintsvc/index.html) 이동합니다.
-1. 오른쪽 상단 모서리에서 **[!UICONTROL 로그인]**&#x200B;을 선택합니다.
+1. 오른쪽 위에서 **[!UICONTROL 로그인]**&#x200B;을 선택합니다.
 
    ![미들웨어 로그인 이미지](images/middleware_login.png)
 
@@ -294,13 +294,13 @@ Adobe Sign 계정 관리자는 미들웨어를 사용하여 [!DNL Veeva Vault]�
 
    ![이미지](images/middleware-signin.png)
 
-   사용자가 로그인하면 아래와 같이 페이지에 오른쪽 상단 모서리에 연결된 전자 메일 ID와 추가 설정 탭이 표시됩니다.
+   로그인에 성공하면 아래와 같이 연관된 전자 메일 ID와 설정 탭이 표시됩니다.
 
    ![이미지](images/middleware_settings.png)
 
 1. **[!UICONTROL 설정]** 탭을 선택합니다.
 
-   설정 페이지에는 사용 가능한 연결이 표시되며, 아래와 같이 첫 번째 연결 설정의 경우에는 아무 것도 표시되지 않습니다.
+   설정 페이지에는 사용 가능한 연결이 표시되며, 아래와 같이 첫 번째 연결 설정의 경우 아무 것도 표시되지 않습니다.
 
    ![이미지](images/middleware_newconnection.png)
 

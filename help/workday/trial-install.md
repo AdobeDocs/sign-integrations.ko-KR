@@ -12,9 +12,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: beafe6c0-262f-4f5b-9315-a023a4eef4a2
-source-git-commit: 3f826e88969562a69279a29dfdd98775ec01fd51
+source-git-commit: c25be043b404e9bf7a90496d4e47c1f22069313d
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '995'
 ht-degree: 29%
 
 ---
@@ -49,7 +49,7 @@ Adobe Sign on-boarding 전문가는 업무일 1일 이내에 [!DNL Workday]에 �
 
 ![Adobe Sign 시작 이메일](images/welcome-email-2020.png)
 
-전자 메일의 지시에 따라 계정을 초기화하고 Adobe Sign [!UICONTROL Home] 페이지에 액세스합니다.
+계정을 초기화하고 Adobe Sign [!UICONTROL Home] 페이지에 액세스하려면 전자 메일의 지침을 따르십시오.
 
 ![Adobe Sign 대시보드](images/classic-home.png)
 
@@ -165,4 +165,4 @@ Adobe Sign 고객은 담당 고객 성공 관리자(CSM)에게 지원을 요청�
 
 * [문서 구성 검토 및 예](https://www.adobe.com//go/adobesign_workday_quick_start){target=&quot;_blank&quot;}
 
-[**Adobe Sign 지원 문의**](https://adobe.com/go/adobesign-support-center_kr)
+[**Adobe Sign 지원 문의**](https://www.adobe.com/go/adobesign-support-center)
