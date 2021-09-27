@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: d8b7271cae9bcbe8b66311eba0317b8937ea855c
+source-git-commit: 3f826e88969562a69279a29dfdd98775ec01fd51
 workflow-type: tm+mt
-source-wordcount: '2839'
+source-wordcount: '3061'
 ht-degree: 2%
 
 ---
@@ -23,17 +23,21 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-이 문서에서는 [!DNL Veeva Vault] 플랫폼과 Adobe Sign의 통합을 설정하는 방법에 대해 설명합니다. [!DNL Veeva Vault] 생명 과학을 위해 구축된 ECM(엔터프라이즈 컨텐츠 관리) 플랫폼입니다. &quot;저장소&quot;는 규정 자료 작성, 연구 보고, 응용 프로그램 승인, 일반 계약 등에 사용되는 일반적인 컨텐츠 및 데이터 저장소입니다. 단일 기업에는 별도로 관리해야 하는 &#39;저장소&#39;가 여러 개 있을 수 있습니다.
+이 문서에서는 [!DNL Veeva Vault] 플랫폼과 Adobe Sign의 통합을 설정하는 방법에 대해 설명합니다. [!DNL Veeva Vault] 생명 과학을 위해 구축된 ECM(엔터프라이즈 컨텐츠 관리) 플랫폼입니다. &quot;저장소&quot;는 규정 자료 작성, 연구 보고, 응용 프로그램 승인, 일반 계약 등에 사용되는 일반적인 컨텐츠 및 데이터 저장소입니다. 단일 엔터프라이즈에는 별도로 관리해야 하는 &#39;저장소&#39;가 여러 개 있을 수 있습니다.
 
 통합을 완료하는 상위 단계는 다음과 같습니다.
 
 * Adobe Sign에서 관리 계정 활성화(신규 고객만 해당)
-* 객체를 생성하여 저장소에서 계약 수명 주기의 기록을 추적합니다.
+* 객체를 생성하여 Vault에서 계약 수명 주기의 기록을 추적합니다.
 * 새 보안 프로필을 만듭니다.
 * [!DNL Veeva Vault] 통합 사용자를 보유하도록 Adobe Sign에서 그룹을 구성합니다.
 * 문서 필드 및 변환을 만듭니다.
 * 웹 작업을 구성하고 문서 주기를 업데이트합니다.
 * 문서 유형 사용자 및 사용자 역할 설정을 만듭니다.
+
+>[!NOTE]
+>
+>Adobe Sign 관리자는 Adobe Sign 내에서 Adobe Sign 설정 단계를 수행해야 합니다.
 
 ## 구성 [!DNL Veeva Vault]
 
@@ -46,7 +50,7 @@ ht-degree: 2%
 
 ### 서명 개체 만들기  {#create-signature-object}
 
-계약 관련 정보를 저장하기 위해 서명 개체를 만듭니다. Signaure 객체는 다음 특정 필드 아래에 정보가 들어 있는 데이터베이스입니다.
+서명 개체는 계약 관련 정보를 저장하기 위해 만들어집니다. Signature 개체는 다음과 같은 특정 필드 아래의 정보를 포함하는 데이터베이스입니다.
 
 **서명 개체 필드**
 
@@ -86,7 +90,7 @@ ht-degree: 2%
 
 ### 서명 이벤트 개체 만들기  {#create-signature-event}
 
-Signaure 이벤트 객체는 계약의 이벤트 관련 정보를 저장하기 위해 만들어집니다. 여기에는 다음과 같은 특정 필드에 대한 정보가 포함됩니다.
+서명 이벤트 객체는 계약의 이벤트 관련 정보를 저장하기 위해 만들어집니다. 여기에는 다음과 같은 특정 필드에 대한 정보가 포함됩니다.
 
 | 필드 | 레이블 | 유형 | 설명 |
 | --- | --- | ---| --- | 
@@ -164,7 +168,7 @@ Adobe Sign과 통합하려면 관리자가 다음과 같은 두 개의 새 공�
 
 ## 문서 변환 만들기 {#create-renditions}
 
-관리자는 *Adobe Sign Rendition(adobe_sign_rendition__c)*&#x200B;이라는 새 변환 유형을 만들어야 합니다. 이 유형은 Vault 통합에서 서명된 PDF 문서를 Adobe Sign으로 업로드하는 데 사용됩니다. Adobe 서명에 적합한 각 문서 유형에 대해 Adobe 서명 변환을 선언해야 합니다.
+관리자는 *Adobe Sign Rendition(adobe_sign_rendition__c)*&#x200B;이라는 새 변환 유형을 만들어야 하며, 이는 Vault 통합에서 서명된 PDF 문서를 Adobe Sign으로 업로드하는 데 사용됩니다. Adobe 서명에 적합한 각 문서 유형에 대해 Adobe 서명 변환을 선언해야 합니다.
 
 ![변환 유형 이미지](images/rendition-type.png)
 
@@ -277,6 +281,53 @@ Vault 문서를 Adobe Sign으로 보낼 때 해당 상태는 계약의 상태와
 >
 >사용자 역할 설정 개체에 문서 유형 그룹 개체를 참조하는 필드가 없으면 이 필드를 추가해야 합니다.
 
+## 미들웨어를 사용하여 [!DNL Veeva Vault]을(를) Adobe Sign에 연결 {#connect-middleware}
+
+Adobe Sign 계정 관리자는 미들웨어를 사용하여 [!DNL Veeva Vault]을 Adobe Sign에 연결하려면 다음 단계를 따라야 합니다.
+
+1. [Adobe Sign forHome  [!DNL Veeva Vault] 페이지로](https://static.adobesigncdn.com/veevavaultintsvc/index.html) 이동합니다.
+1. 오른쪽 상단 모서리에서 **[!UICONTROL 로그인]**&#x200B;을 선택합니다.
+
+   ![미들웨어 로그인 이미지](images/middleware_login.png)
+
+1. 열리는 Adobe Sign 로그인 페이지에서 계정 관리자 전자 메일 및 암호를 제공한 다음 **[!UICONTROL Sing in]**&#x200B;을 선택합니다.
+
+   ![이미지](images/middleware-signin.png)
+
+   사용자가 로그인하면 아래와 같이 페이지에 오른쪽 상단 모서리에 연결된 전자 메일 ID와 추가 설정 탭이 표시됩니다.
+
+   ![이미지](images/middleware_settings.png)
+
+1. **[!UICONTROL 설정]** 탭을 선택합니다.
+
+   설정 페이지에는 사용 가능한 연결이 표시되며, 아래와 같이 첫 번째 연결 설정의 경우에는 아무 것도 표시되지 않습니다.
+
+   ![이미지](images/middleware_newconnection.png)
+
+1. **[!UICONTROL 연결 추가]**&#x200B;를 선택하여 새 연결을 추가합니다.
+
+1. 열리는 연결 추가 대화 상자에서 [!DNL Veeva Vault] 자격 증명을 포함하여 필요한 세부 정보를 제공합니다.
+
+   Adobe Sign Credentials는 초기 Adobe Sign 로그인에서 자동으로 채워집니다.
+
+   ![이미지](images/middleware_addconnection.png)
+
+1. **[!UICONTROL Validate]**&#x200B;를 선택하여 계정 세부 정보를 확인합니다.
+
+   유효성 검사가 성공하면 아래와 같이 &#39;사용자가 성공적으로 검증됨&#39; 알림이 표시됩니다.
+
+   ![이미지](images/middleware_validated.png)
+
+1. 사용을 특정 Adobe Sign Group으로 제한하려면 **[!UICONTROL 그룹]** 드롭다운 목록을 확장하고 사용 가능한 그룹 중 하나를 선택합니다.
+
+   ![이미지](images/middleware_group.png)
+
+1. **[!UICONTROL Save]**&#x200B;를 선택하여 새 연결을 저장합니다.
+
+   새 연결은 [!DNL Veeva Vault]과(와) Adobe Sign 간의 성공적인 통합을 보여주는 설정 탭에 나타납니다.
+
+   ![이미지](images/middleware_setup.png)
+
 ## 패키지 배포 수명 주기 {#deployment-lifecycle}
 
 ### 일반 배포 수명 주기 {#general-deployment}
@@ -293,7 +344,7 @@ Vault 문서를 Adobe Sign으로 보낼 때 해당 상태는 계약의 상태와
 
 **6단계** Vault에서 Adobe 로그인 기록에 액세스해야 하는 사용자를 위해 모든 보안 프로파일에 대한 읽기 권한을 서명, 서명자 및 서명 이벤트 객체에 할당합니다.
 
-**7단계** Adobe Signature에 적합한 각 문서 유형의 주기에서 teh Adobe Sign Admin 역할을 정의합니다. 각 Adobe Sign 특정 주기 상태에 대해 이 역할이 추가되고 적절한 권한으로 구성됩니다.
+**7단계** Adobe Signature에 적합한 각 문서 유형의 주기에서 Adobe Sign Admin 역할을 정의합니다. 각 Adobe Sign 특정 주기 상태에 대해 이 역할이 추가되고 적절한 권한으로 구성됩니다.
 
 **8단계** Adobe 서명에 적합한 각 문서 유형에 대해 Adobe 서명 변환을 선언합니다.
 
