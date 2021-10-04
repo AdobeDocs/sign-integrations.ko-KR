@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 2a8cd053744fdd5dbb4b97a861e7d29e0722779f
+source-git-commit: a262c45fa21bf5d7d0536588d2a621c50d1e8fa0
 workflow-type: tm+mt
-source-wordcount: '3039'
+source-wordcount: '3090'
 ht-degree: 2%
 
 ---
@@ -283,9 +283,9 @@ Vault 문서를 Adobe Sign으로 보낼 때 해당 상태는 계약의 상태와
 
 ## 미들웨어를 사용하여 [!DNL Veeva Vault]을(를) Adobe Sign에 연결 {#connect-middleware}
 
-Adobe Sign 계정 관리자는 미들웨어를 사용하여 [!DNL Veeva Vault]을 Adobe Sign에 연결하려면 다음 단계를 따라야 합니다.
+[!DNL Veeva Vault] 및 Adobe Sign Admin 계정에 대한 설정을 완료한 후 관리자는 미들웨어를 사용하여 두 계정 간에 접속을 생성해야 합니다. [!DNL Veeva Vault] 및 Adobe Sign accountnt 연결은 Adobe Sign Identity에서 시작한 다음 Veeva Vault ID를 저장하는 데 사용됩니다. Adobe Sign 계정 관리자는 미들웨어를 사용하여 [!DNL Veeva Vault]을 Adobe Sign에 연결하려면 다음 단계를 따라야 합니다.
 
-1. [!DNL Veeva Vault] 홈 페이지로 이동합니다.
+1. [홈 페이지](https://static.adobesigncdn.com/veevavaultintsvc/index.html)의 Adobe Sign으로 이동합니다. [!DNL Veeva Vault] 
 1. 오른쪽 위에서 **[!UICONTROL 로그인]**&#x200B;을 선택합니다.
 
    ![미들웨어 로그인 이미지](images/middleware_login.png)

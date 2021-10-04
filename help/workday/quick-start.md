@@ -11,32 +11,32 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 8b6fa8b4-e240-4ebe-ae2a-8807d75a6c69
-source-git-commit: d462ccf41fa5483cfa02f5eaf154c23f26157a1e
+source-git-commit: 5ac9dc27dcdb6cab19281e6aafd4ea0524cc01d6
 workflow-type: tm+mt
-source-wordcount: '1352'
-ht-degree: 30%
+source-wordcount: '1348'
+ht-degree: 23%
 
 ---
 
 # [!DNL Workday]빠른 시작 안내서 {#workday-quick-start-guide}
 
-[**Adobe Sign 지원 문의**](https://adobe.com/go/adobesign-support-center_kr)
+[**Adobe Sign 지원 문의**](https://www.adobe.com/go/adobesign-support-center)
 
 ## 개요 {#overview}
 
 이 문서는 [!DNL Workday] 관리자가 e-signature를 얻기 위해 Adobe Sign을 포함하도록 [!DNL Workday] 비즈니스 프로세스를 사용자 지정하는 방법을 이해하도록 설계되었습니다. [!DNL Workday] 내에서 Adobe Sign을 사용하려면 다음과 같은 [!DNL Workday] 항목을 만들고 수정하는 방법을 알아야 합니다.
 
-* 비즈니스 프로세스 프레임워크
+* [!UICONTROL 비즈니스 프로세스 프레임워크]
 * 테넌트 설정 및 구성
 * 보고 및 [!DNL Workday] Studio 통합
 
 ##  내 Adobe Sign 액세스[!DNL Workday] {#access-adobe-sign}
 
-Adobe 서명 전자 서명 기능은 BPF(Business Process Framework)에서 [!UICONTROL 문서 단계 검토] 작업으로 표시되고 문서 배포 작업으로 표시됩니다.
+[!UICONTROL BPF(] Business Process Framework)의  [!UICONTROL 문서 ] 검토 단계 작업( [!UICONTROL Review Document Stepaction)] 과 문서 배포(Distribute Documents) 작업으로 Adobe 서명 전자 서명 기능이 표시됩니다.
 
 ## [!UICONTROL 문서 검토 단계] {#review-document-step}
 
-[!DNL Workday]에 대한 Adobe Sign은 [!UICONTROL 문서 단계 검토]를 통해 공개되며, 제안, 문서 및 작업 배포, 보상 제안 등을 포함하여 [!DNL Workday] 내 400개 이상의 비즈니스 프로세스에 추가할 수 있습니다.
+[!UICONTROL 의 Adobe Sign은 [!UICONTROL Offer], [!UICONTROL Distributed Documents and Tasks], [!UICONTROL Proposition]을 포함하여 [!DNL Workday]Review Document Step]을 통해 표시됩니다. 기타[!DNL Workday]
 
 [!UICONTROL Review Document Step]](https://doc.workday.com/#/reader/3DMnG~27o049IYFWETFtTQ/TboWWKQemecNipWgxLAjqg)의 커뮤니티 기사를 참조할 수 있습니다.[[!DNL Workday] 
 
@@ -62,7 +62,7 @@ Adobe 서명 전자 서명 기능은 BPF(Business Process Framework)에서 [!UIC
    * 역할 기호에서 한 명의 사용자가 발생하면 행 단계가 완료되고 문서가 다음 행 단계로 이동됩니다.
    * 모든 행이 서명되면 [!UICONTROL 문서 단계 검토]가 완료됩니다.
 
-1. 서명받을 문서를 지정합니다. 구인 BP인 경우 문서 생성 단계의 문서를 사용할 수 있습니다. 그렇지 않은 경우 기존 문서 또는 보고서를 선택하십시오.
+1. 서명받을 문서를 지정합니다. 문서가 [!UICONTROL Offer BP]인 경우 문서 생성 단계에서 사용할 수 있습니다. 그렇지 않은 경우 기존 문서 또는 보고서를 선택하십시오.
 
 1. 필요한 만큼 문서가 생길 때까지 3단계를 반복합니다..
 
@@ -78,11 +78,11 @@ Adobe 서명 전자 서명 기능은 BPF(Business Process Framework)에서 [!UIC
 
 ## 업무 프로세스 단계 노트 {#business-process-step-notes}
 
-비즈니스 프로세스 프레임워크는 강력합니다. 그러나 다음을 확인해야 합니다.
+[!UICONTROL Business Process ] Frameworks는 강력합니다. 그러나 다음을 확인해야 합니다.
 
 * 모든 업무 프로세스에는 완료 단계가 있어야 하며, 이는 업무 프로세스가 끝날 때 이상적으로 필요합니다.
 
-* 검색 아이콘의 관련 작업 메뉴에서 완료 단계가 설정됩니다. 이 작업은 BP를 &quot;보고&quot;하는 동안에만 가능하며 &quot;편집&quot;하는 동안에는 불가능합니다.
+* 완료 단계는 검색 아이콘의 관련 작업 메뉴에서 설정됩니다. 이 작업은 BP를 &quot;보고&quot;하는 동안에만 가능하며 &quot;편집&quot;하는 동안에는 불가능합니다.
 
 * 비즈니스 프로세스의 모든 단계가 순차적으로 실행됩니다.
 
@@ -90,7 +90,7 @@ Adobe 서명 전자 서명 기능은 BPF(Business Process Framework)에서 [!UIC
 
 ### 예: 제안 {#example-offer}
 
-제안 BP는 제안 BP를 실행하기 위해 구성해야 하는 Job Application Dynamic BP의 하위 프로세스입니다. 이 프로세스는 직무 지원 상태가 “구인” 또는 “구인하기(Make Offer)”로 바뀌는 경우에 트리거됩니다.
+Offer BP는 Offer BP를 실행하도록 구성해야 하는 [!UICONTROL Job Application Dynamic BP]의 하위 프로세스입니다. 작업 응용 프로그램 상태가 &quot;[!UICONTROL Offer]&quot; 또는 &quot;[!UICONTROL Make Offer]&quot;으로 이동될 때 트리거됩니다.
 
 아래 예에서는 [!UICONTROL 문서 검토 단계]에서 북미 및 일본 모두에 대해 동적 문서 단계를 사용하고 있습니다.
 
@@ -128,7 +128,7 @@ Adobe 서명 전자 서명 기능은 BPF(Business Process Framework)에서 [!UIC
 
 [!DNL Workday] 30에 소개된 문서 일괄 배포 또는 작업 작업을 사용하여 개별 서명자의 큰 그룹(&lt;20K)에 하나의 문서를 보낼 수 있습니다. 이 기능은 문서당 단일 서명으로 제한됩니다. 배포 만들기는 검색 표시줄에서 &#39;[!UICONTROL 문서 배포 만들기 또는 작업]&#39; 작업에 액세스하여 수행됩니다.
 
-예: Global Modern Services의 모든 관리자에게 직원 형평성 선택 양식을 보냅니다. 원하는 경우 개별 관리자에게 추가로 필터링할 수 있습니다.
+예: [!UICONTROL Global Modern Services]의 모든 관리자에게 사원 지분 선택 양식을 보냅니다. 원하는 경우 개별 관리자에게 추가로 필터링할 수 있습니다.
 
 **문서 배포 보기 또는 작업** 보고서에 액세스하여 배포 진행률을 추적할 수도 있습니다.
 
@@ -158,7 +158,7 @@ Adobe 서명 전자 서명 기능은 BPF(Business Process Framework)에서 [!UIC
 
 모든 서명 그룹에서 문서에 서명하면 서명된 문서의 복사본이 전자 메일을 통해 서명 그룹의 모든 구성원에게 배포됩니다.
 
-이 동작을 방지하려면 Adobe Sign Success Manager 또는 [Adobe Sign Support 팀](https://adobe.com/go/adobesign-support-center)에 문의하십시오.
+이 동작을 방지하려면 [!UICONTROL Adobe Sign Success Manager] 또는 [Adobe Sign Support 팀](https://adobe.com/go/adobesign-support-center)에 문의하십시오.
 
 [!DNL Workday] 내에서 전체 프로세스 레코드에서 서명된 문서에 액세스할 수 있습니다. 다음을 찾을 수 있습니다.
 
@@ -186,9 +186,9 @@ Adobe 서명 전자 서명 기능은 BPF(Business Process Framework)에서 [!UIC
 
 Adobe Sign은 통합 파트너로서, 통합 과정에서 서명을 받지 못하거나 대기 중인 서명의 알림에 실패하는 경우에 문의해야 합니다.
 
-Adobe Sign 고객은 담당 고객 성공 관리자(CSM)에게 지원을 요청해야 합니다. 또는 Adobe 기술 지원(전화: 1-866-318-4100)에 전화하여 제품 목록이 나오면 4번에 이어 2번(전화 안내에 따라)을 누르면 됩니다.
+Adobe Sign 고객은 고객 성공 관리자에게 지원을 요청해야 합니다. 또는 전화로 [!UICONTROL Adobe 기술 지원]에 연결할 수 있습니다. 1-86-318-4100, 제품 목록을 기다린 후 다음을 입력합니다. 4를 누르고 2를 누릅니다.
 
-* [문서에 Adobe 텍스트 태그 추가하기](https://adobe.com/go/adobesign_text_tag_guide)
+* [문서에 Adobe 텍스트 태그 추가하기](https://www.adobe.com/go/adobesign_text_tag_guide)
 
 <!--
 [Download PDF](images/adobe-sign-for-workday-quick-start-guide-2016.pdf)

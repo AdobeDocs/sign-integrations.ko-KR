@@ -2,10 +2,10 @@
 user-guide-title: Adobe Sign 통합 설명서
 index: true
 role: Leader
-source-git-commit: 924813403d8e13f816347dd548a68a16d78d866e
+source-git-commit: 5ac9dc27dcdb6cab19281e6aafd4ea0524cc01d6
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 35%
+source-wordcount: '48'
+ht-degree: 27%
 
 ---
 
@@ -25,6 +25,4 @@ ht-degree: 35%
 + Veva Vault {#veeva}용 Adobe 사인
    + [설치 안내서](veeva/install.md)
    + [사용 안내서](veeva/user.md)
-+ NetSuite용 Adobe Sign {#netsuite}
-+ [NetSuite용 Adobe Sign 릴리스 정보](release-notes.md)
-+ [NetSuite용 Adobe 사인 설치 안내서](netsuite/install.md)
+
