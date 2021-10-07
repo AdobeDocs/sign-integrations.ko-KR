@@ -7,9 +7,9 @@ type: Documentation
 solution: Adobe Sign
 role: User, Developer
 topic: Integrations
-source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
+source-git-commit: 40fe3649aab0499ce8e5fbd1b11308ffbd759a44
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2354'
 ht-degree: 1%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 ## 플러그 인 업그레이드 {#upgrade-plugin}
 
-[!DNL SugarCRM] 플러그인의 Adobe [!DNL EchoSign]을 최신 버전으로 업데이트하는 경우 이전 버전을 제거하지 않고 플러그인을 설치해야 합니다.
+[!DNL SugarCRM] 플러그인에 대한 Adobe [!DNL EchoSign]을 최신 버전으로 업데이트하는 경우 이전 버전을 제거하지 않고 플러그인을 설치해야 합니다.
 플러그 인을 업그레이드한 후 **[!UICONTROL 관리]** > **[!UICONTROL 복구]**&#x200B;로 이동한 후 **[!UICONTROL 빠른 복구 및 재구축]**&#x200B;을 선택합니다.
 
 **참고:** 이전 플러그 인을 제거한 경우 제거 중에 테이블을 제거하지 마십시오. 그렇지 않으면 [!DNL EchoSign] 계약 데이터가 손실될 수 있습니다.
@@ -247,6 +247,10 @@ Adobe [!DNL EchoSign]은(는) [!DNL SugarCRM]에서 Quotes와 직접 통합되�
 [!UICONTROL 계약의 ] 하위 패널은 서명을 위해 전송된 계약의 상태를 추적합니다. [!DNL EchoSign] [!DNL EchoSign] 계약의 최신 업데이트를 보려면 **[!UICONTROL 상태 업데이트]**&#x200B;를 선택하십시오. [!UICONTROL 상태 업데이트] 단추는 서명을 위해 계약을 보낸 후에만 사용할 수 있습니다.
 
 ![이미지](images/update-cancel-status.png)
+
+서명에 대한 계약을 보낸 후 **[!UICONTROL 업데이트 상태]**&#x200B;를 선택하여 최신 상태를 검색합니다.
+
+![이미지](images/events-subpanel.png)
 
 ### 미리 알림 보내기 {#send-reminders}
 
