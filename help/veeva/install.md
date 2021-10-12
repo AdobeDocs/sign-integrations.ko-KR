@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: d8071d9aa23351e31a9360d3c4d17f6297d0e2f1
+source-git-commit: 45bc2d698396bb07c4a246930d34b7e2ad0f6648
 workflow-type: tm+mt
-source-wordcount: '3115'
+source-wordcount: '3113'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 2%
 
 ## 구성 [!DNL Veeva Vault]
 
-[!DNL Veeva Vault]을(를) Adobe Sign과 통합하도록 구성하려면 Vault에서 계약 수명 주기의 기록을 추적하는 데 도움이 되는 특정 객체를 만듭니다. 관리자가 다음 개체를 만들어야 합니다.
+Adobe Sign과 통합되도록 [!DNL Veeva Vault]을 구성하려면 Vault에서 계약 수명 주기의 기록을 추적하는 데 도움이 되는 특정 객체를 만듭니다. 관리자가 다음 개체를 만들어야 합니다.
 
 * 서명
 * 서명자
@@ -57,7 +57,7 @@ ht-degree: 2%
 | 필드 | 레이블 | 유형 | 설명 |
 | --- | --- | ---| --- | 
 | external_id__c | 계약 ID | 문자열(100) | Adobe Sign의 고유한 계약 ID를 보관합니다. |
-| 파일_해시_c | 파일 해시 | 문자열(50) | Adobe Sign으로 전송된 파일의 md5 chcksum을 보관합니다. |
+| 파일_해시_c | 파일 해시 | 문자열(50) | Adobe Sign으로 전송된 파일의 md5 체크섬을 보관합니다. |
 | 이름__v | 이름 | 문자열(128) | 계약명을 보관합니다. |
 | sender__c | 발신자 | 개체(사용자) | 계약을 작성한 저장소 사용자에 대한 참조를 보관합니다. |
 | signature_status__c | 서명 상태 | 문자열(75) | Adobe Sign에서 계약 상태를 유지합니다. |
@@ -122,7 +122,7 @@ Adobe Sign 통합 프로세스를 잠그기 위해 Process Locker 개체가 만�
 
 ![서명 이벤트 세부 정보 이미지](images/security-profiles.png)
 
-Vault에서 Adobe Sign 내역에 액세스해야 하는 사용자의 보안 프로파일에는 서명, 서명자 및 서명 이벤트 객체에 대한 읽기 권한이 있어야 합니다.
+Vault에서 Adobe 로그인 기록에 액세스해야 하는 사용자의 보안 프로필에는 서명, 서명자 및 서명 이벤트 객체에 대한 읽기 권한이 있어야 합니다.
 
 ![서명 이벤트 세부 정보 이미지](images/set-permissions.png)
 
@@ -223,7 +223,7 @@ Vault 문서를 Adobe Sign으로 보낼 때 해당 상태는 계약의 상태와
 
    ![주기 상태 1 이미지](images/lifecycle-state1.png)
 
-* **Adobe Sign Draft에서**: 문서가 이미 Adobe Sign에 업로드되고 계약이 초안 상태에 있음을 나타내는 상태의 자리 표시자 이름입니다. 필수 상태입니다. 이 상태는 다음 다섯 가지 사용자 작업을 수행해야 합니다.
+* **Adobe Sign Draft에서**: 문서가 이미 Adobe Sign에 업로드되고 계약이 초안 상태에 있음을 나타내는 상태의 자리 표시자 이름입니다. 필수 상태입니다. 이 상태에서는 다음 다섯 가지 사용자 작업을 정의해야 합니다.
 
    * 문서의 상태를 *Adobe Sign Authoring* 상태로 변경하는 작업입니다. 이 사용자 작업의 이름은 모든 주기의 모든 문서 유형에 대해 동일해야 합니다. 필요한 경우 이 작업의 조건을 &quot;Adobe Sign 사용자 작업 허용(Allow Adobe Sign user actions equals eques Yes)&quot;으로 설정할 수 있습니다.
    * 문서의 상태를 *Adobe 서명 상태*&#x200B;로 변경하는 작업입니다. 이 사용자 작업의 이름은 모든 주기의 모든 문서 유형에 대해 동일해야 합니다. 필요한 경우 이 작업의 조건을 &quot;Adobe Sign 사용자 작업 허용(Allow Adobe Sign user actions equals eques Yes)&quot;으로 설정할 수 있습니다.
@@ -283,7 +283,7 @@ Vault 문서를 Adobe Sign으로 보낼 때 해당 상태는 계약의 상태와
 
 ## 미들웨어를 사용하여 [!DNL Veeva Vault]을(를) Adobe Sign에 연결 {#connect-middleware}
 
-[!DNL Veeva Vault] 및 Adobe Sign Admin 계정에 대한 설정을 완료한 후 관리자는 미들웨어를 사용하여 두 계정 간에 접속을 생성해야 합니다. [!DNL Veeva Vault] 및 Adobe Sign accountnt 연결은 Adobe Sign Identity에서 시작한 다음 Veeva Vault ID를 저장하는 데 사용됩니다.
+[!DNL Veeva Vault] 및 Adobe Sign Admin 계정에 대한 설정을 완료한 후 관리자는 미들웨어를 사용하여 두 계정 간에 접속을 생성해야 합니다. [!DNL Veeva Vault] 및 Adobe Sign 계정 연결은 Adobe Sign Identity에서 시작한 다음 Veeva Vault ID를 저장하는 데 사용됩니다.
 시스템 보안 및 안정성을 위해 관리자는 `bob.smith@xyz.com`와 같은 개인 사용자 계정 대신 `adobe.for.veeva@xyz.com`과 같은 전용 [!DNL Veeva Vault] 시스템/서비스/유틸리티 계정을 사용해야 합니다.
 
 Adobe Sign 계정 관리자는 미들웨어를 사용하여 [!DNL Veeva Vault]을 Adobe Sign에 연결하려면 다음 단계를 따라야 합니다.
