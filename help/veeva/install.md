@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 7ded835b48519cba656f160e691c697c91e2c8d0
+source-git-commit: aef70e46f24bb019b07092d84d69519fe16846e4
 workflow-type: tm+mt
-source-wordcount: '3131'
+source-wordcount: '3163'
 ht-degree: 2%
 
 ---
@@ -182,9 +182,13 @@ Adobe Sign 및 Vault 통합에서는 다음 두 가지 웹 작업을 작성하�
 
    유형: 문서 대상: 저장소 URL 내에 표시: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
+   ![Adobe Sign 만들기 이미지](images/create-adobe-sign.png)
+
 * **Adobe Sign 취소**: Adobe Sign에서 기존 계약을 취소하고 문서 상태를 초기 상태로 되돌립니다.
 
    유형: 문서 대상: 저장소 URL 내에 표시: : <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
+
+   ![Adobe Sign 취소 이미지](images/cancel-adobe-sign.png)
 
 ## 문서 생명주기 업데이트 {#document-lifecycle}
 
@@ -192,12 +196,16 @@ Adobe 서명에 적합한 각 문서 유형에 대해 새 주기 역할과 상�
 
 ### 수명 주기 역할 {#lifecycle-role}
 
-Adobe Sign 관리자 응용 프로그램 역할은 Adobe 서명이 가능한 문서에서 사용하는 모든 주기에 추가되어야 합니다. 이 역할은 다음 옵션을 사용하여 만들어야 합니다.
-
-* 동적 액세스 제어 사용
-* 문서 유형 그룹만 포함하는 문서 공유 규칙
+Adobe Sign 관리자 응용 프로그램 역할은 아래와 같이 Adobe 서명이 가능한 문서에서 사용하는 모든 주기에 추가되어야 합니다.
 
 ![수명 주기 관리자 역할 이미지](images/document-lifecycle-admin-role.png)
+
+관리자 역할은 다음 옵션을 사용하여 만들어야 합니다.
+
+* 동적 액세스 제어를 사용합니다.
+* 아래 이미지와 같이 문서 유형 그룹만 포함하는 문서 공유 규칙입니다.
+
+![Adobe Sign 공유 규칙 이미지](images/adobe-sign-sharing-rule.png)
 
 ### 주기 상태 {#lifecycle-states}
 
@@ -263,7 +271,9 @@ Adobe Sign 계약 주기에는 다음과 같은 상태가 있습니다.
 
 ![문서 유형 이미지](images/document-type.png)
 
-![문서 유형 이미지](images/document-edit-details.png)
+![문서 편집 세부 정보 이미지](images/document-edit-details.png)
+
+![문서 유형 그룹 이미지](images/document-type-groups.png)
 
 ### 사용자 역할 설정 만들기 {#create-user-role-setup}
 
