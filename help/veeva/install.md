@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 722f39a7220d72fde19ebb1058c8c2e8dea06b46
+source-git-commit: f647d0573f3e44f5a7e7997a309a8d18886959be
 workflow-type: tm+mt
-source-wordcount: '3401'
+source-wordcount: '3317'
 ht-degree: 2%
 
 ---
@@ -43,41 +43,13 @@ ht-degree: 2%
 
 구성하려면 [!DNL Veeva Vault] Adobe Sign과 통합하려면 다음 단계를 구현해야 합니다.
 
-**1단계.** &#39;Adobe Sign 관리 그룹&#39;이라는 새 그룹을 만듭니다.
-
-**2단계.** [패키지 배포](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration.zip).
-
-**3단계.** 보안 프로필 만들기
-
-**4단계** 사용자 만들기
-
-**5단계** 문서 유형 그룹 구성
-
-**6단계** 사용자 역할 설정 만들기
-
-**7단계** 문서 필드 설정
-
-**8단계** 문서 변환 선언
-
-**9단계** 웹 동작 업데이트
-
-**10단계** 문서 생명주기 업데이트
-
-**11단계** Lifecycle Stage 그룹의 일반 주기에 Adobe Sign 스테이지 추가
-
-**12단계** 주기 상태의 사용자 역할에 대한 권한 설정
-
-**13단계** 문서 상태 및 사용자 역할을 기반으로 원자성 보안 설정
-
-**14단계** Adobe Sign 취소에 대한 문서 메시지 만들기
-
-### 1. 그룹 만들기 {#create-group}
+### 1단계. 그룹 만들기 {#create-group}
 
 Adobe Sign 구성 방법 [!DNL Vault], 라는 새 그룹 *Adobe Sign 관리 그룹* 생성됩니다. 이 그룹은 Adobe Sign 관련 필드에 대한 문서 필드 수준 보안을 설정하는 데 사용되며 다음을 포함해야 합니다. *Adobe Sign 통합 프로필* 있습니다.
 
 ![서명 이벤트 세부 정보 이미지](images/create-admin-group.png)
 
-### 2. 패키지 배포 {#deploy-package}
+### 2단계. 패키지 배포 {#deploy-package}
 
 [패키지 배포](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration.zip) 단계를 따릅니다. 배포되면 패키지는 다음을 생성합니다.
 
@@ -131,7 +103,7 @@ Adobe Sign 구성 방법 [!DNL Vault], 라는 새 그룹 *Adobe Sign 관리 그�
 | role__c | 역할 | 문자열(30) | Adobe Sign 계약 참가자의 역할을 보유합니다. |
 | signature__c | 서명 | 개체(서명) | 서명 상위 레코드에 대한 참조를 보유합니다. |
 | signature_status__c | 서명 상태 | 문자열(100) | Adobe Sign 계약 참가자의 상태를 유지합니다. |
-| user__c | 사용자 | 객체(사용자) | Holds the reference to the signatory’s user record if participant is a Vault user |
+| user__c | 사용자 | 객체(사용자) | 참가자가 자격 증명 모음 사용자인 경우 서명자의 사용자 레코드에 대한 참조를 보유합니다. |
 
 ![서명자 세부 정보 이미지](images/signatory-object-details.png)
 
@@ -160,18 +132,18 @@ Adobe Sign 통합 프로세스를 잠그기 위해 Process Locker 개체가 만�
 
 ![서명 이벤트 세부 정보 이미지](images/process-locker-details.png)
 
-#### Application Role {#create-application-roles}
+#### 응용 프로그램 역할 {#create-application-roles}
 
 라는 응용 프로그램 역할을 만들어야 합니다. *Adobe Sign 관리자 역할*. 이 역할은 Adobe 서명에 적합한 각 문서 유형의 주기에서 정의되어야 합니다. 각 Adobe Sign 특정 라이프사이클 상태에 대해 Adobe Sign 관리자 역할이 추가되고 적절한 권한으로 구성됩니다.
 
 ![응용 프로그램 역할 만들기 이미지](images/create-application-roles.png)
 
-### 3. 보안 프로필 설정 {#security-profiles}
+### 3단계. 보안 프로필 설정 {#security-profiles}
 
-자격 증명 모음을 성공적으로 통합하기 위해 *Adobe Sign 통합 프로필* 가 만들어지고 사용 권한이 *Adobe Sign 관리 작업*. Adobe Sign 통합 프로파일은 시스템 계정에 할당되며 Vault API를 호출할 때 통합에서 사용됩니다. This profile allows permissions for:
+자격 증명 모음을 성공적으로 통합하기 위해 *Adobe Sign 통합 프로필* 가 만들어지고 사용 권한이 *Adobe Sign 관리 작업*. Adobe Sign 통합 프로파일은 시스템 계정에 할당되며 Vault API를 호출할 때 통합에서 사용됩니다. 이 프로필은 다음에 대한 권한을 허용합니다.
 
-* Vault APIs
-* Reading, creating, editing, and deleting: Signature, Signatory, Signature Events, and Process Locker objects
+* 저장소 API
+* 읽기, 만들기, 편집 및 삭제: 서명, 서명자, 서명 이벤트 및 Process Locker 개체
 
 ![서명 이벤트 세부 정보 이미지](images/security-profiles.png)
 
@@ -179,7 +151,7 @@ Adobe Sign 통합 프로세스를 잠그기 위해 Process Locker 개체가 만�
 
 ![서명 이벤트 세부 정보 이미지](images/set-permissions.png)
 
-## 4. 사용자 만들기 {#create-user}
+### 4단계. 사용자 만들기 {#create-user}
 
 Adobe Sign 통합의 Vault 시스템 계정 사용자는 다음을 수행해야 합니다.
 
@@ -198,7 +170,7 @@ Adobe Sign 통합의 Vault 시스템 계정 사용자는 다음을 수행해야 
 
    ![서명 이벤트 세부 정보 이미지](images/add-user.png)
 
-### 5. 문서 유형 그룹 만들기 {#create-document-type-group}
+### 5단계. 문서 유형 그룹 구성 {#create-document-type-group}
 
 Adobe Sign 패키지를 배포하면 &#39;Adobe Sign 문서&#39;라는 문서 유형 그룹 레코드가 생성됩니다.
 
@@ -212,13 +184,13 @@ Adobe Sign 프로세스에 적합한 모든 문서 분류에 대해 이 문서 �
 
 **참고:** 사용자 역할 설정 개체에 문서 유형 그룹 개체를 참조하는 필드가 없으면 필드를 추가해야 합니다.
 
-### 6. 사용자 역할 설정 만들기 {#create-user-role-setup}
+### 6단계. 사용자 역할 설정 만들기 {#create-user-role-setup}
 
 주기가 적절하게 구성되면, 시스템은 Adobe Sign 프로세스에 적합한 모든 문서에 대해 DAC에 Adobe Sign 관리 사용자가 추가되었는지 확인해야 합니다. 이는 다음을 지정하는 적절한 사용자 역할 설정 레코드를 생성하여 수행됩니다.
 
-* 문서 유형 그룹을 &#39;Adobe Sign 문서&#39;로
-* 응용 프로그램 역할을 &#39;Adobe Sign 관리자 역할&#39;로 설정하고
-* 통합 사용자.
+* 문서 유형 그룹을 Adobe Sign 문서로
+* Adobe Sign 관리자 역할로서의 응용 프로그램 역할
+* 통합 사용자
 
 ![사용자 역할 설정 이미지](images/user-role-setup.png)
 
@@ -226,7 +198,7 @@ Adobe Sign 프로세스에 적합한 모든 문서 분류에 대해 이 문서 �
 
 ![사용자 역할 설정 이미지](images/create-setup-field.png)
 
-### 7. 문서 필드 설정 {#create-fields}
+### 7단계. 문서 필드 설정 {#create-fields}
 
 Adobe Sign와의 통합을 설정하려면 다음과 같은 두 개의 새로운 공유 문서 필드가 필요합니다.
 
@@ -257,15 +229,15 @@ Adobe Sign와의 통합을 설정하려면 다음과 같은 두 개의 새로운
 
    ![adobe sign 사용자 작업 허용 이미지](images/allow-adobe-sign-user-actions.png)
 
-### 8. 문서 변환 선언 {#declare-renditions}
+### 8단계. 문서 변환 선언 {#declare-renditions}
 
-The new rendition type called *Adobe Sign Rendition (adobe_sign_rendition__c) is used by Vault integration to upload signed PDF documents to Adobe Sign. Adobe Sign 변환은 Adobe 서명에 적합한 각 문서 유형에 대해 선언되어야 합니다.
+*Adobe Sign Rendition(adobe_sign_rendition__c)이라는 새 변환 유형은 Vault 통합에서 서명된 PDF 문서를 Adobe Sign으로 업로드하는 데 사용됩니다. Adobe Sign 변환은 Adobe 서명에 적합한 각 문서 유형에 대해 선언되어야 합니다.
 
 ![렌디션 유형 이미지](images/rendition-type.png)
 
 ![렌디션 유형 이미지](images/edit-details-clinical-type.png)
 
-### 9. 웹 작업 업데이트 {#web-actions}
+### 9단계. 웹 동작 업데이트 {#web-actions}
 
 Adobe Sign 및 Vault 통합에서는 다음 두 가지 웹 작업을 작성하고 구성해야 합니다.
 
@@ -273,7 +245,7 @@ Adobe Sign 및 Vault 통합에서는 다음 두 가지 웹 작업을 작성하�
 
    유형: 문서 대상: 저장소 URL 내에 표시: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
-   ![Image of create Adobe Sign](images/create-adobe-sign.png)
+   ![Adobe Sign 만들기 이미지](images/create-adobe-sign.png)
 
 * **Adobe Sign 취소**: Adobe Sign에서 기존 계약을 취소하고 문서 상태를 초기 상태로 되돌립니다.
 
@@ -281,7 +253,7 @@ Adobe Sign 및 Vault 통합에서는 다음 두 가지 웹 작업을 작성하�
 
    ![Adobe Sign 취소 이미지](images/cancel-adobe-sign.png)
 
-### 10. 문서 생명주기 업데이트 {#document-lifecycle}
+### 10단계. 문서 생명주기 업데이트 {#document-lifecycle}
 
 Adobe 서명에 적합한 각 문서 유형에 대해 새 주기 역할과 상태를 추가하여 해당 문서 주기를 업데이트해야 합니다.
 
@@ -351,35 +323,35 @@ Adobe Sign 계약 주기에는 다음과 같은 상태가 있습니다.
 * **Adobe 서명 중**: 문서가 Adobe Sign에 업로드되고 해당 계약서가 이미 참가자에게 전송되었음을 나타내는 상태의 자리 표시자 이름입니다(OUT_FOR_SIGNATURE 또는 OUT_FOR_APPROVAL 상태). 필수 상태입니다. 이 상태에는 다음 다섯 가지 사용자 작업이 정의되어 있어야 합니다.
 
    * 문서의 상태를 Adobe Sign 취소됨 상태로 변경하는 작업입니다. 이 작업의 대상 상태는 고객의 요구 사항이 무엇이든지 될 수 있으며, 서로 다른 유형에 따라 다를 수 있습니다. 이 사용자 작업의 이름은 수명 주기에 관계없이 모든 문서 유형에 대해 동일해야 합니다. 필요한 경우 이 작업에 대한 기준을 &quot;Adobe Sign 사용자 작업 허용이 Yes&quot;로 설정할 수 있습니다.
-   * 문서의 상태를 Adobe Sign 거부됨 상태로 변경하는 작업입니다. 이 작업의 대상 상태는 고객의 요구 사항이 무엇이든지 될 수 있으며, 서로 다른 유형에 따라 다를 수 있습니다. The name of this user action must be the same for all document types no matter what lifecycle is. 필요한 경우 이 작업에 대한 기준을 &quot;Adobe Sign 사용자 작업 허용이 Yes&quot;로 설정할 수 있습니다.
-   * 문서의 상태를 Adobe 서명됨 상태로 변경하는 작업입니다. 이 작업의 대상 상태는 고객의 요구 사항이 무엇이든지 될 수 있으며, 서로 다른 유형에 따라 다를 수 있습니다. However, the name of this user action must be the same for all document types no matter what lifecycle is. 필요한 경우 이 작업에 대한 기준을 &quot;Adobe Sign 사용자 작업 허용이 Yes&quot;로 설정할 수 있습니다.
+   * 문서의 상태를 Adobe Sign 거부됨 상태로 변경하는 작업입니다. 이 작업의 대상 상태는 고객의 요구 사항이 무엇이든지 될 수 있으며, 서로 다른 유형에 따라 다를 수 있습니다. 이 사용자 작업의 이름은 수명 주기에 관계없이 모든 문서 유형에 대해 동일해야 합니다. 필요한 경우 이 작업에 대한 기준을 &quot;Adobe Sign 사용자 작업 허용이 Yes&quot;로 설정할 수 있습니다.
+   * 문서의 상태를 Adobe 서명됨 상태로 변경하는 작업입니다. 이 작업의 대상 상태는 고객의 요구 사항이 무엇이든지 될 수 있으며, 서로 다른 유형에 따라 다를 수 있습니다. 그러나 이 사용자 작업의 이름은 수명 주기에 관계없이 모든 문서 유형에 대해 동일해야 합니다. 필요한 경우 이 작업에 대한 기준을 &quot;Adobe Sign 사용자 작업 허용이 Yes&quot;로 설정할 수 있습니다.
    * 웹 동작을 호출하는 동작 *Adobe Sign*.
-   * 웹 동작을 호출하는 동작 *Adobe Sign 취소*. This state must have security that allowsAdobe Sign Admin role to: view document, view content, edit fields, edit relationships, download source, manage viewable rendition, and change state.
+   * 웹 동작을 호출하는 동작 *Adobe Sign 취소*. 이 상태에는 Adobe Sign 관리자 역할로 다음을 수행할 수 있는 보안이 있어야 합니다. 문서 보기, 컨텐츠 보기, 필드 편집, 관계 편집, 소스 다운로드, 표시 가능한 변환 관리 및 상태 변경 등의 작업을 수행할 수 있습니다.
 
       ![주기 상태 이미지 4](images/lifecycle-state4.png)
 
-* **Adobe Signed (Approved)**: This is a placeholder name for the state that indicates that the document is uploaded to Adobe Sign and that its agreement is completed (SIGNED or APPROVED state). 필수 상태이며 승인됨과 같은 기존 주기 상태일 수 있습니다.
-이 상태에는 사용자 작업이 필요하지 않습니다. This state must have security that allows Adobe Sign Admin role to: view documents, view content, and edit fields.
+* **서명된 Adobe(승인됨)**: 문서가 Adobe Sign에 업로드되고 계약이 완료되었음을 나타내는 상태(서명됨 또는 승인됨 상태)의 자리 표시자 이름입니다. 필수 상태이며 승인됨과 같은 기존 주기 상태일 수 있습니다.
+이 상태에는 사용자 작업이 필요하지 않습니다. 이 상태에는 Adobe Sign 관리자 역할이 다음을 수행할 수 있는 보안이 있어야 합니다. 문서를 보고, 콘텐츠를 보고, 필드를 편집합니다.
 
 다음 다이어그램은 &#39;Adobe 이전 서명&#39; 상태가 초안인 Adobe Sign 계약과 보관 문서 상태 간의 매핑을 보여 줍니다.
 
 ![Adobe Sign Vault 맵 이미지](images/sign-vault-mappings.png)
 
-### 11. Lifecycle Stage 그룹의 일반 주기에 Adobe Sign 스테이지 추가
+### 11단계. Lifecycle Stage 그룹의 일반 주기에 Adobe Sign 스테이지 추가
 
 ![Adobe Sign Vault 맵 이미지](images/add-adobe-sign-stage.png)
 
-### 12. 수명 주기 상태의 사용자 역할에 대한 권한 설정
+### 12단계. 주기 상태의 사용자 역할에 대한 권한 설정
 
 아래 이미지와 같이 주기 상태에서 각 사용자 역할에 대해 적절한 권한을 설정해야 합니다.
 
 ![Adobe Sign Vault 맵 이미지](images/set-user-role-permissions.png)
 
-### 13. 문서 상태 및 사용자 역할을 기반으로 원자성 보안 설정
+### 13단계. 문서 상태 및 사용자 역할을 기반으로 원자성 보안 설정
 
 ![Adobe Sign Vault 맵 이미지](images/set-atomic-security.png)
 
-### 14. Adobe Sign 취소에 대한 문서 메시지 만들기
+### 14단계. Adobe Sign 취소에 대한 문서 메시지 만들기
 
 ![Adobe Sign Vault 맵 이미지](images/create-cancel-message.png)
 
