@@ -9,9 +9,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: e1394c24aebd1e026eb6c5a33935149f33ef8ea4
+source-git-commit: f460f23ac3e412b527a91668561fff48ac518941
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '667'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 [**Adobe Sign 지원 문의**](https://adobe.com/go/adobesign-support-center_kr)
 
-이 문서는 [!DNL Veeva Vault] 고객은 Adobe Sign for [!DNL Veeva Vault] 통합을 통해 계약을 전송할 수 있습니다.
+이 문서는 [!DNL Veeva Vault] 고객은 Adobe Sign for [!DNL Veeva Vault] 계약서 전송을 위한 통합.
 
 ## 개요 {#overview}
 
@@ -30,7 +30,7 @@ Adobe Sign과 [!DNL Veeva Vault] 에서는 법적 서명 또는 감사 가능한
 
 Adobe Sign과 [!DNL Veeva Vault] 문서 및 서명 워크플로우를 간소화하고 가속화합니다. 통합 작업 과정을 사용하여 다음을 수행할 수 있습니다.
 
-* 스네일 메일, 야간 배송, 팩스 전송에 소요되는 시간과 리소스를 절약합니다.
+* 스네일 메일, 오버나이트 또는 팩스 전송에 소요되는 시간과 리소스를 절약할 수 있습니다.
 * 전자 서명 또는 승인을 위해 계약서를 [!DNL Veeva Vault]을 누르고 실시간 계약 내역에 액세스하고 저장된 계약을 확인할 수 있습니다.
 * 조직 전체에서 실시간으로 거래를 추적하고 계약을 조회, 서명, 취소 또는 거절할 때 업데이트를 받을 수 있습니다.
 * 20개 이상의 언어로 로그인하고 전 세계 50개 이상의 로케일에서 팩스 회신 서비스를 지원합니다.
