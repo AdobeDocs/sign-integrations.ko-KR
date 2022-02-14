@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c3ad36ec887230d746d8d2084127155615f1d0b9
+source-git-commit: db0d9022e520e9db39254e78b66aab8b913f353a
 workflow-type: tm+mt
-source-wordcount: '3145'
+source-wordcount: '3169'
 ht-degree: 3%
 
 ---
@@ -34,6 +34,7 @@ ht-degree: 3%
 * 문서 필드 및 변환을 만듭니다.
 * 웹 동작을 구성하고 문서 주기를 업데이트합니다.
 * 문서 유형 사용자 및 사용자 역할 설정을 생성합니다.
+* 미들웨어를 사용하여 Veeva 자격 증명 모음을 Adobe Sign에 연결합니다.
 
 >[!NOTE]
 >
@@ -233,13 +234,13 @@ Adobe Sign 및 Vault 통합에서는 다음 두 가지 웹 작업을 작성하�
 
 * **Adobe Sign 만들기**: Adobe Sign 계약을 생성하거나 표시합니다.
 
-   유형: 문서 대상: 저장소 URL 내에 표시: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
+   유형: 문서 대상: 자격 증명 모음 내 표시: 사후 메시지 URL을 통해 사후 세션 자격 증명 사용: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
    ![Adobe Sign 만들기 이미지](images/create-adobe-sign.png)
 
 * **Adobe Sign 취소**: Adobe Sign에서 기존 계약을 취소하고 문서 상태를 초기 상태로 되돌립니다.
 
-   유형: 문서 대상: 저장소 URL 내에 표시: : <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
+   유형: 문서 대상: 자격 증명 모음 내 표시: 사후 메시지 URL을 통해 사후 세션 자격 증명 사용: : <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
    ![Adobe Sign 취소 이미지](images/cancel-adobe-sign.png)
 
