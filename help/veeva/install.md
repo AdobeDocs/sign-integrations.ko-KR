@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 535c4510e876c708679d7f6a800206264a9876e2
+source-git-commit: 928bbadab28f041de2d8bc17ad8383f61033a6c0
 workflow-type: tm+mt
-source-wordcount: '3428'
+source-wordcount: '3431'
 ht-degree: 3%
 
 ---
@@ -135,7 +135,7 @@ Adobe Sign 통합 프로세스를 잠그기 위해 Process Locker 개체가 만�
 
 배포 패키지의 일부로 제공되는 Signature, Signatory, Signature Event 및 Process Locker 개체에는 기본적으로 &#39;이 개체에 대한 데이터 변경 감사&#39; 속성이 활성화되어 있습니다.
 
-**참고:** 감사 로그에 데이터 변경 사항을 기록하는 저장소 캡처 개체를 포함하려면 데이터 변경 사항 감사 설정을 사용합니다. 이 설정은 기본적으로 꺼져 있습니다. 이 설정을 사용하고 레코드를 만들면 사용하지 않도록 설정할 수 없습니다. 이 설정이 꺼져 있고 레코드가 있는 경우 저장소 소유자만 설정을 업데이트할 수 있습니다.
+**참고:** 데이터 변경 감사 설정을 활성화하여 저장소 캡처 개체가 감사 로그의 데이터 변경 사항을 기록하도록 할 수 있습니다. 이 설정은 기본적으로 꺼져 있습니다. 이 설정을 사용하고 레코드를 만들면 더 이상 사용하지 않도록 설정할 수 없습니다. 이 설정이 꺼져 있고 레코드가 있는 경우 저장소 소유자만 설정을 업데이트할 수 있습니다.
 
 #### **서명 개체의 참가자 및 기록 표시** {#display-participants-history}
 
@@ -167,7 +167,7 @@ Adobe Sign 통합 프로세스를 잠그기 위해 Process Locker 개체가 만�
 
    ![이미지](images/participants-and-history.png)
 
-* 아래와 같이 서명에 대한 오디오 추적을 봅니다.
+* 아래와 같이 서명에 대한 감사 추적을 봅니다.
 
    ![이미지](images/audit-trail.png)
 
