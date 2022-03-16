@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 04a3e58da81c1a034318807776077d0076eec85f
+source-git-commit: ad78f32d6c418ac9c7120899831b74bec9d5620d
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3503'
 ht-degree: 3%
 
 ---
@@ -60,6 +60,7 @@ Adobe Sign 구성 방법 [!DNL Vault], 라는 새 그룹 *Adobe Sign 관리 그�
 * 서명자 개체 페이지 레이아웃
 * Process Locker 개체 페이지 레이아웃
 * Adobe Sign 변환 유형
+* 원래 변환 유형
 * 공유 필드 서명__c , allow_adobe_sign_user_actions__c
 * Adobe Sign 웹 동작
 * Adobe Sign 웹 동작 취소
@@ -266,6 +267,10 @@ Adobe Sign 프로세스에 적합한 모든 문서 분류에 대해 이 문서 �
 
 ![렌디션 유형 이미지](images/edit-details-clinical-type.png)
 
+새 변환 유형 *원본 변환(original_rendition__c)* 볼트 통합에서 서명된 문서를 볼 수 있는 변환으로 가져온 경우 원래 볼 수 있는 변환을 저장하는 데 사용해야 하는 변환의 이름으로 사용합니다.
+
+![이미지](images/original-rendition.png)
+
 ### 9단계. 웹 동작 업데이트 {#web-actions}
 
 Adobe Sign 및 Vault 통합에서는 다음 두 가지 웹 작업을 작성하고 구성해야 합니다.
@@ -440,6 +445,10 @@ Adobe Sign 계정 관리자는 아래 단계에 따라 연결해야 합니다 [!
    **참고:** 새 Adobe Sign 사용자의 자동 프로비저닝은 Adobe Sign의 Adobe Sign 계정 수준에서 사용하도록 설정한 경우에만 작동합니다. **[!UICONTROL Sign 사용자 자동 프로비저닝]** 의 경우[!DNL Veeva Vault]Adobe Sign 계정 관리자가 아래 그림과 같이 Adobe Sign 통합
 
    ![이미지](images/allow-auto-provisioning.png)
+
+1. 원본 렌디션 대신 Adobe Sign 렌디션이 Veeva에 표시되도록 구성하려면 확인란을 선택합니다 **[!UICONTROL Adobe Sign 변환 표시]**.
+
+   ![이미지](images/edit-connection-dispplay-adobe-sign-rendition.png)
 
 1. 선택 **[!UICONTROL 저장]** 새 연결을 저장합니다.
 
