@@ -1,17 +1,17 @@
 ---
 title: Adobe Sign 통합
-description: Adobe Sign Integrations 설정 방법
+description: Adobe Sign 통합 설정 방법 학습
 audience: External
 products: Adobe Sign
 type: Documentation
-solution: Adobe Sign
+solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: b2fa280d-894c-47da-bbf5-8b4d0c6b6165
-source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
+source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 25%
+source-wordcount: '121'
+ht-degree: 26%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 25%
 
 ![배너](images/sign-banner.png)
 
-조직의 기존 시스템, 프로세스 및 응용 프로그램에 [!DNL Adobe Sign] 솔루션을 설치, 통합 및 사용하는 방법에 대해 알아봅니다.
+설치, 통합 및 사용 방법 학습 [!DNL Adobe Sign] 기업의 기존 시스템, 프로세스 및 애플리케이션에 대한 솔루션
 
-## 주요 기사
+## 주요 도움말
 
 <table style="table-layout:fixed">
 <tr>
@@ -37,21 +37,21 @@ ht-degree: 25%
   </td>
   <td>
     <a href="workday/tutorial-video.md">
-    <img alt="Adobe Sign을 [!DNL Workday]와 통합" src="images/wd-integration.png"/>
+    <img alt="Adobe Sign과 통합 [!DNL Workday]" src="images/wd-integration.png"/>
     </a>
     <div>
-    <a href="workday/tutorial-video.md"><strong>Adobe Sign을 [!DNL Workday]와 통합</strong></a>
+    <a href="workday/tutorial-video.md"><strong>Adobe Sign과 통합 [!DNL Workday]</strong></a>
     </div>
-    <em>모든 문서를 관리하기 위해 [!DNL Workday] 내에서 작동하도록 Adobe Sign을 구성하는 방법 알아보기</em>
+    <em>Adobe Sign이 내부에서 작동하도록 구성하는 방법 알아보기 [!DNL Workday] 모든 문서 관리</em>
   </td>
   <td>
     <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;amp;amp;sort=latest_replies&amp;amp;amp;filter=all">
-    <img alt="Adobe 서명 지원 커뮤니티" src="images/sign-forum.png"/>
+    <img alt="Adobe Sign 지원 커뮤니티" src="images/sign-forum.png"/>
     </a>
     <div>
-    <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all"><strong>Adobe 서명 지원 커뮤니티</strong></a>
+    <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all"><strong>Adobe Sign 지원 커뮤니티</strong></a>
     </div>
-    <em>질문을 하거나, 피드백과 팁을 공유하거나, Sign Integration 제품 및 서비스에 대해 다른 Adobe Sign 사용자 및 매니아와 상의하십시오.</em>
+    <em>다른 Adobe Sign 사용자 및 애호가와 Sign 통합 제품 및 서비스에 대해 질문하거나, 피드백 및 팁을 공유하거나 토론할 수 있습니다.</em>
     <br>
   </td>
 </tr>
