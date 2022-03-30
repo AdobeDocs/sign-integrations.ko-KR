@@ -9,7 +9,7 @@ solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: 1eafeb73f7b7055fa958b15a02148898f7c9d406
+source-git-commit: 2c2d7ebe427166222cc62c5ab8f867275a97cce9
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Adobe Acrobat Sign과 [!DNL Veeva Vault] 문서 및 서명 워크플로우를 �
 
 * 스네일 메일, 오버나이트 또는 팩스 전송에 소요되는 시간과 리소스를 절약할 수 있습니다.
 * 전자 서명 또는 승인을 위해 계약서를 [!DNL Veeva Vault]을 누르고 실시간 계약 내역에 액세스하고 저장된 계약을 확인할 수 있습니다.
-* 조직 전체에서 실시간으로 거래를 추적하고 계약을 조회, 서명, 취소 또는 거절할 때 업데이트를 받을 수 있습니다.
+* 조직 전체에서 거래를 실시간으로 추적하고 계약을 조회, 서명, 취소 또는 거절할 때 업데이트를 받을 수 있습니다.
 * 20개 이상의 언어로 로그인하고 전 세계 50개 이상의 로케일에서 팩스 회신 서비스를 지원합니다.
 * 전송 옵션에 대해 재사용 가능한 계약 템플릿을 만듭니다.
 
@@ -56,7 +56,7 @@ Veeva용 Adobe Acrobat Sign을 사용하여 계약서를 보내려면:
 
    ![](images/choose-document-type.png)
 
-1. 선택 **[!UICONTROL 확인]** 대화 상자를 닫습니다.
+1. 대화 상자를 닫으려면 **[!UICONTROL 확인]**.
 
 1. 선택 **[!UICONTROL 다음]**.
 
@@ -117,11 +117,11 @@ Veeva용 Adobe Acrobat Sign을 사용하여 계약서를 보내려면:
 
 1. Adobe Acrobat Sign에서 모든 서명이 캡처되고 완료되면 보관소의 문서 상태가 로 변경됩니다. [!UICONTROL 승인됨].
 
-1. 선택 **[!UICONTROL 문서 파일]** option 키를 누른 상태에서 **[!UICONTROL 변환]** 섹션을 참조하십시오. 문서가 승인됨 상태가 되면 &#39;Adobe Sign Rendition&#39;이라는 새 변환이 자동으로 만들어집니다.
+1. 선택 **[!UICONTROL 문서 파일]** option 키를 누른 상태에서 **[!UICONTROL 변환]** 섹션을 참조하십시오. 문서가 승인됨 상태가 되면 &#39;Adobe Sign Rendition&#39;이라는 변환이 자동으로 만들어집니다.
 
    ![](images/document-files.png)
 
-1. 수신자 서명의 유효성을 확인하기 위해 Adobe Sign Rendition을 다운로드합니다.
+1. 수신자 서명의 유효성을 확인하기 위해 Adobe Sign 렌디션을 다운로드합니다.
 
    ![](images/verify-signature.png)
 

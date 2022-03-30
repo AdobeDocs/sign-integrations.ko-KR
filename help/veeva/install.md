@@ -10,9 +10,9 @@ solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 1eafeb73f7b7055fa958b15a02148898f7c9d406
+source-git-commit: 2c2d7ebe427166222cc62c5ab8f867275a97cce9
 workflow-type: tm+mt
-source-wordcount: '3573'
+source-wordcount: '3568'
 ht-degree: 3%
 
 ---
@@ -189,7 +189,7 @@ Adobe Acrobat Sign 통합 프로세스를 잠그기 위해 Process Locker 개체
 
 Adobe Acrobat Sign 통합의 Vault 시스템 계정 사용자는 다음을 수행해야 합니다.
 
-* Adobe Sign 통합 프로필 보유
+* Adobe Sign 통합 프로파일 보유
 * 보안 프로필 보유
 * 암호 만료를 해제하는 특정 보안 정책 보유
 * Adobe Sign 관리 그룹의 멤버가 되어야 합니다.
@@ -222,7 +222,7 @@ Adobe Acrobat Sign 프로세스에 적합한 모든 문서 분류에 대해 이 
 
 ### 6단계. 사용자 역할 설정 만들기 {#create-user-role-setup}
 
-주기가 적절하게 구성되면, 시스템은 Adobe Sign Sign 프로세스에 적합한 모든 문서에 대해 DAC에 Adobe Acrobat 관리 사용자가 추가되었는지 확인해야 합니다. 이는 다음을 지정하는 적절한 사용자 역할 설정 레코드를 생성하여 수행됩니다.
+주기가 올바르게 구성되면, 시스템은 Adobe Sign Sign 프로세스를 이용할 수 있는 모든 문서에 대해 DAC에 Adobe Acrobat 관리 사용자가 추가되었는지 확인해야 합니다. 이는 다음을 지정하는 적절한 사용자 역할 설정 레코드를 생성하여 수행됩니다.
 
 * 문서 유형 그룹을 Adobe Sign 문서로
 * Adobe Sign 관리자 역할로서의 응용 프로그램 역할
@@ -239,7 +239,7 @@ Adobe Acrobat Sign 프로세스에 적합한 모든 문서 분류에 대해 이 
 
 ![이미지](images/2-document-fields.png)
 
-문서 필드를 설정하려면 다음을 수행하십시오.
+문서 필드를 설정하려면
 
 1. 구성 탭으로 이동하여 **[!UICONTROL 문서 필드]** > **[!UICONTROL 공유 필드]**.
 1. [섹션 표시] 필드에서 **[!UICONTROL 표시 섹션 만들기]** 및 할당 **[!UICONTROL Adobe 서명]** 섹션 레이블로 사용합니다.
