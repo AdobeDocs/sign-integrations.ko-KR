@@ -9,26 +9,26 @@ solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
+source-git-commit: 1eafeb73f7b7055fa958b15a02148898f7c9d406
 workflow-type: tm+mt
-source-wordcount: '667'
-ht-degree: 1%
+source-wordcount: '721'
+ht-degree: 0%
 
 ---
 
-# Adobe Sign [!DNL Veeva Vault]: 사용 안내서 {#veeva-vault-user-guide}
+# Adobe Acrobat Sign for [!DNL Veeva Vault]: 사용 안내서 {#veeva-vault-user-guide}
 
-[**Adobe Sign 지원 문의**](https://adobe.com/go/adobesign-support-center_kr)
+[**Adobe Acrobat Sign 지원 문의**](https://adobe.com/go/adobesign-support-center_kr)
 
-이 문서는 [!DNL Veeva Vault] 고객은 Adobe Sign for [!DNL Veeva Vault] 계약서 전송을 위한 통합.
+이 문서는 [!DNL Veeva Vault] 고객은 Adobe Acrobat Sign for [!DNL Veeva Vault] 계약서 전송을 위한 통합.
 
 ## 개요 {#overview}
 
-Adobe Sign과 [!DNL Veeva Vault] 에서는 법적 서명 또는 감사 가능한 문서 처리가 필요한 모든 문서에 대해 서명 또는 승인을 얻는 프로세스를 용이하게 합니다.
+Adobe Acrobat Sign과 [!DNL Veeva Vault] 에서는 법적 서명 또는 감사 가능한 문서 처리가 필요한 모든 문서에 대해 서명 또는 승인을 얻는 프로세스를 용이하게 합니다.
 
 서명을 위해 문서를 보내는 전체적인 프로세스는 이메일을 보내는 것과 유사하므로 대부분의 사용자가 쉽게 채택할 수 있습니다.
 
-Adobe Sign과 [!DNL Veeva Vault] 문서 및 서명 워크플로우를 간소화하고 가속화합니다. 통합 작업 과정을 사용하여 다음을 수행할 수 있습니다.
+Adobe Acrobat Sign과 [!DNL Veeva Vault] 문서 및 서명 워크플로우를 간소화하고 가속화합니다. 통합 작업 과정을 사용하여 다음을 수행할 수 있습니다.
 
 * 스네일 메일, 오버나이트 또는 팩스 전송에 소요되는 시간과 리소스를 절약할 수 있습니다.
 * 전자 서명 또는 승인을 위해 계약서를 [!DNL Veeva Vault]을 누르고 실시간 계약 내역에 액세스하고 저장된 계약을 확인할 수 있습니다.
@@ -36,9 +36,9 @@ Adobe Sign과 [!DNL Veeva Vault] 문서 및 서명 워크플로우를 간소화�
 * 20개 이상의 언어로 로그인하고 전 세계 50개 이상의 로케일에서 팩스 회신 서비스를 지원합니다.
 * 전송 옵션에 대해 재사용 가능한 계약 템플릿을 만듭니다.
 
-## Adobe Sign을 사용하여 계약 보내기 [!DNL Veeva Vault] {#send-sign-vault-agreement}
+## Adobe Acrobat 서명을 사용하여 계약 보내기 [!DNL Veeva Vault] {#send-sign-vault-agreement}
 
-Veeva용 Adobe Sign을 사용하여 계약서를 보내려면 다음을 수행하십시오.
+Veeva용 Adobe Acrobat Sign을 사용하여 계약서를 보내려면:
 
 1. 다음으로 이동 [[!DNL Veeva Vault] 로그인 페이지](https://login.veevavault.com/) 사용자 이름과 암호를 입력합니다. 아래와 같이 저장소의 홈 페이지가 열립니다.
 
@@ -86,20 +86,24 @@ Veeva용 Adobe Sign을 사용하여 계약서를 보내려면 다음을 수행�
 
    ![](images/select-adobe-sign.png)
 
+1. Adobe Acrobat Sign 계정에서 UMG(다중 그룹의 사용자) 기능이 활성화되어 있고 발신자가 다중 그룹에 속한 경우 아래와 같은 대화 상자가 표시됩니다. 대화 상자에서 그룹을 선택한 다음 **[!UICONTROL 확인]**.
+
+   ![](images/umg-dialog.png)
+
 1. 자격 증명 모음에서 열리는 iFrame 창에서 수신자의 전자 메일 주소를 입력하고 **[!UICONTROL 다음]**.
 
    ![](images/iframe.png)
 
-   **참고:** 보낸 사람의 전자 메일에 대한 Adobe Sign 사용자 계정이 없는 경우 iFrame 창에 아래와 같은 메시지가 표시됩니다. 또한 사용자에게 계정을 활성화하는 지침이 포함된 이메일을 보냅니다.
+   **참고:** 전송자의 전자 메일에 대한 Adobe Acrobat Sign 사용자 계정이 없는 경우 아래와 같이 iFrame 창에 메시지가 표시됩니다. 또한 사용자에게 계정을 활성화하는 지침이 포함된 이메일을 보냅니다.
 
    ![](images/iFrame-registration-message.png)
 
    ![](images/iFrame-confirm-email.png)
 
-   그러나 *Sign 사용자 자동 프로비저닝* 기능이 비활성화되고, Adobe Sign 사용자 생성이 실패하며, iFrame 창에 사용자에게 Adobe Sign 계정 관리자에게 문의하라는 메시지가 표시됩니다. Adobe Sign 계정 관리자는 다음 작업 중 하나를 수행할 수 있습니다.
+   그러나 *Sign 사용자 자동 프로비저닝* 기능이 비활성화되고, Adobe Acrobat Sign 사용자 생성이 실패하며, iFrame 창에 사용자에게 Adobe Acrobat Sign 계정 관리자에게 문의하라는 메시지가 표시됩니다. Adobe Acrobat Sign 계정 관리자는 다음 작업 중 하나를 수행할 수 있습니다.
 
    * 활성화 *Sign 사용자 자동 프로비저닝* 계정에서 사용할 수 있습니다.
-   * Veeva Vault Adobe Sign 통합을 사용하기 전에 Adobe Sign에서 사용자를 작성합니다.
+   * Veeva Vault Adobe Acrobat Sign 통합 기능을 사용하기 전에 Adobe Acrobat Sign에서 사용자를 작성합니다.
 
    ![](images/iFrame-contact-administrator.png)
 
@@ -111,7 +115,7 @@ Veeva용 Adobe Sign을 사용하여 계약서를 보내려면 다음을 수행�
 
    ![](images/in-adobe-signing.png)
 
-1. Adobe Sign에서 모든 서명이 캡처되고 완료되면 보관소의 문서 상태가 로 변경됩니다. [!UICONTROL 승인됨].
+1. Adobe Acrobat Sign에서 모든 서명이 캡처되고 완료되면 보관소의 문서 상태가 로 변경됩니다. [!UICONTROL 승인됨].
 
 1. 선택 **[!UICONTROL 문서 파일]** option 키를 누른 상태에서 **[!UICONTROL 변환]** 섹션을 참조하십시오. 문서가 승인됨 상태가 되면 &#39;Adobe Sign Rendition&#39;이라는 새 변환이 자동으로 만들어집니다.
 
@@ -121,7 +125,7 @@ Veeva용 Adobe Sign을 사용하여 계약서를 보내려면 다음을 수행�
 
    ![](images/verify-signature.png)
 
-## Adobe Sign for [!DNL Veeva Vault] {#cancel-sign-vault-agreement}
+## Adobe Acrobat Sign for [!DNL Veeva Vault] {#cancel-sign-vault-agreement}
 
 1. 다음으로 이동 [[!DNL Veeva Vault] 로그인 페이지](https://login.veevavault.com/) 사용자 이름과 암호를 입력합니다. 아래와 같이 저장소의 홈 페이지가 열립니다.
 
