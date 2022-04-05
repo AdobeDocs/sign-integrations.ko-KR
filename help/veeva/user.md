@@ -9,7 +9,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
+source-git-commit: 076c575d179f576366c1d9a76be0a582154574b1
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -86,7 +86,7 @@ Veeva용 Adobe Acrobat Sign을 사용하여 계약서를 보내려면:
 
    ![](images/select-adobe-sign.png)
 
-1. Adobe Acrobat Sign 계정에서 UMG(다중 그룹의 사용자) 기능이 활성화되어 있고 발신자가 다중 그룹에 속한 경우 아래와 같은 대화 상자가 표시됩니다. 대화 상자에서 그룹을 선택한 다음 **[!UICONTROL 확인]**.
+1. Adobe Acrobat Sign 계정에서 UMG(다중 그룹의 사용자) 기능이 활성화되어 있고 발신자가 다중 그룹에 속한 경우 아래와 같은 대화 상자가 표시됩니다. 대화 상자에서 그룹을 선택한 다음 **[!UICONTROL 다음]**.
 
    ![](images/umg-dialog.png)
 
