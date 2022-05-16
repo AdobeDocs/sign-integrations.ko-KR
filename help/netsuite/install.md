@@ -8,9 +8,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: c54f848d7832e831dc10c8069ac572226f0b31e8
+source-git-commit: 581b336b4a3610cfe3fd0d92f2a4eebe55b89b27
 workflow-type: tm+mt
-source-wordcount: '4873'
+source-wordcount: '4870'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ Adobe Sign [!DNL NetSuite] 전자 서명과 [!DNL NetSuite]. Adobe Sign [!DNL Ne
 
 1. 이미 Adobe Sign 고객 계정인 경우 다음 단계를 따르십시오  [설치 또는 업그레이드 후 OAuth 구성](#oauth).
 
-   Adobe Sign 계정이 없는 경우 [엔터프라이즈 평가판 등록](https://esign.adobe.com/adobe-sign-DNL NetSuite-trial-registration.html) 계정을 사용하여 시스템을 테스트합니다. 온라인 등록 단계에 따라 Adobe Sign 계정을 활성화합니다.
+   Adobe Sign 계정이 없는 경우 [엔터프라이즈 평가판 등록](https://esign.adobe.com/adobe-sign-netsuite-trial-registration.html) 시스템을 테스트할 계정입니다. 온라인 등록 단계에 따라 Adobe Sign 계정을 활성화합니다.
 
 ## 설치 또는 업그레이드 후 OAuth 구성 {#oauth}
 
@@ -111,13 +111,13 @@ Adobe Sign은 OAuth 2.0을 사용하여 내에서 Adobe Sign 계정을 인증합
    >Sandbox 계정에서 OAuth를 구성할 때 인증이 완료될 때 &quot;고객 comp ID를 확인할 수 없습니다&quot;라는 오류가 발생할 수 있습니다.
    >
    >
-   >계속하려면 URL(시스템)의 계정 도메인 부분을 변경해야 합니다.[!DNL NetSuite].com)을 다시 가리키기 위해 브라우저에서 [!DNL NetSuite] 샌드박스:
+   >계속하려면 브라우저에서 URL의 계정 도메인 부분(system.netsuite.com)을 변경하여 [!DNL NetSuite] 샌드박스:
    >
    >
    >변경:
    >
    >
-   >있습니다.[!DNL NetSuite].com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
+   >system.netsuite.com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
    >
    >
    >받는 사람:
@@ -581,7 +581,7 @@ Quote 를 볼 때 **[!UICONTROL Send for Signature]**. 계약에 첨부된 견�
 
 ## 문제 해결
 
-### 업데이트 진행률 확인
+### 업데이트 진행률 확인  {#determineprogress}
 
 업데이트가 오래 걸리는 것으로 나타나면 Adobe Sign 번들 설치 스크립트의 실행 로그 하위 탭을 확인하여 다음과 같이 업데이트 진행률을 확인할 수 있습니다.
 
