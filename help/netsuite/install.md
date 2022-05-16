@@ -8,9 +8,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: 0577f30c35a348174bed27c6eb309fce43f03eca
+source-git-commit: c54f848d7832e831dc10c8069ac572226f0b31e8
 workflow-type: tm+mt
-source-wordcount: '4871'
+source-wordcount: '4873'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Adobe Sign [!DNL NetSuite] 전자 서명과 [!DNL NetSuite]. Adobe Sign [!DNL NetSuite] 통합을 통해 전자 서명이 필요한 계약서, 견적서, 기타 문서 등의 계약서를 수신자에게 직접 전송 [!DNL NetSuite]. 고객, 리드, 견적 및 기타 업체로부터 Adobe Sign 계약을 생성하고 전송할 수 있습니다. [!DNL NetSuite] 있습니다. Adobe Sign 업데이트 [!DNL NetSuite] 계약 상태를 저장하고 계약 과 [!DNL NetSuite] 레코드가 완전히 실행된 후 다음에서 보낸 모든 계약의 기록을 볼 수 있습니다. [!DNL NetSuite] 선택할 수 있습니다.
 
-자세한 내용은 [Adobe Sign [!DNL NetSuite] 릴리스 노트](https://experienceleague.adobe.com/docs/sign-integrations/using/netsuite/release-notes.html?lang=en) 참조하십시오.
+자세한 내용은 [Adobe Sign for NetSuite 릴리스 정보](https://experienceleague.adobe.com/docs/sign-integrations/using/netsuite/release-notes.html?lang=en) 참조하십시오.
 
 ## 번들 설치 및 OAuth 구성 {#install}
 
@@ -66,7 +66,7 @@ Adobe Sign [!DNL NetSuite] 전자 서명과 [!DNL NetSuite]. Adobe Sign [!DNL Ne
 
 1. 이미 Adobe Sign 고객 계정인 경우 다음 단계를 따르십시오  [설치 또는 업그레이드 후 OAuth 구성](#oauth).
 
-   Adobe Sign 계정이 없는 경우 [엔터프라이즈 평가판 등록](https://esign.adobe.com/adobe-sign-)[!DNL NetSuite]-trial-registration.html) 계정을 사용하여 시스템을 테스트합니다. 온라인 등록 단계에 따라 Adobe Sign 계정을 활성화합니다.
+   Adobe Sign 계정이 없는 경우 [엔터프라이즈 평가판 등록](https://esign.adobe.com/adobe-sign-DNL NetSuite-trial-registration.html) 계정을 사용하여 시스템을 테스트합니다. 온라인 등록 단계에 따라 Adobe Sign 계정을 활성화합니다.
 
 ## 설치 또는 업그레이드 후 OAuth 구성 {#oauth}
 
@@ -123,7 +123,7 @@ Adobe Sign은 OAuth 2.0을 사용하여 내에서 Adobe Sign 계정을 인증합
    >받는 사람:
    >
    >
-   >있습니다.**샌드박스.**[!DNL NetSuite].com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
+   >있습니다.**샌드박스.** netsuite.com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
 
 ## 번들 업데이트(기존 사용자)
 
@@ -355,7 +355,7 @@ Adobe Sign 통합 번들은 이미 많은 표준을 사용하여 Adobe Sign 계�
 
    >[!NOTE]
    >
-   >자세한 내용은 *[사용자 정의 레코드 유형에 대한 권한 목록 설정](https://system.[!DNL NetSuite].com/app/help/helpcenter.nl?fid=section_N2879931.html)* 자세한 내용은 NetSuite 도움말 센터 항목을 참조하십시오.
+   >자세한 내용은 *[사용자 정의 레코드 유형에 대한 권한 목록 설정](https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N2879931.html)* 자세한 내용은 NetSuite 도움말 센터 항목을 참조하십시오.
 
    1. 다음에서 역할을 선택합니다. *역할* 목록.
    1. 설정 *레벨* 에 **[!UICONTROL 전체]**.
@@ -573,7 +573,7 @@ Quote 를 볼 때 **[!UICONTROL Send for Signature]**. 계약에 첨부된 견�
 
 ## 번들 제거
 
-번들을 제거하려면 [!DNL NetSuite] 도움말. 자세한 내용은 *[번들 제거](https://docs.oracle.com/cloud/latest/)[!DNL NetSuite]cs_gs/NSBDL/NSBDL.pdf)* 의 항목 [!DNL NetSuite] 자세한 내용은 도움말 센터를 참조하십시오.
+번들을 제거하려면 [!DNL NetSuite] 도움말. 자세한 내용은 *[번들 제거](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3400972.html)* 의 항목 [!DNL NetSuite] 자세한 내용은 도움말 센터를 참조하십시오.
 
 번들을 제거하면 서명되지 않은 계약도 삭제됩니다. 서명된 계약 및 해당 감사 PDF 파일은 영향을 받지 않습니다.
 
