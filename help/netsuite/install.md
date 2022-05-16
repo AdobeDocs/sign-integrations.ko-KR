@@ -8,9 +8,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
+source-git-commit: 0577f30c35a348174bed27c6eb309fce43f03eca
 workflow-type: tm+mt
-source-wordcount: '4870'
+source-wordcount: '4871'
 ht-degree: 1%
 
 ---
@@ -243,7 +243,7 @@ Adobe Sign 통합 번들을 사용하면 [!DNL NetSuite] 에서 보낸 계약 �
 
    * SuiteScript 섹션에서 **[!UICONTROL 클라이언트 SuiteScript]** 및 **[!UICONTROL 서버 SuiteScript]** 에 동의해야 합니다.
 
-1. 선택 **[!UICONTROL 저장]**.
+1. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
    옵션은 이미지에 표시된 대로 설정됩니다.
 
@@ -312,7 +312,7 @@ Adobe Sign 통합 번들은 이미 많은 표준을 사용하여 Adobe Sign 계�
 
    * 및 **[!UICONTROL 대상]** 하위 탭 활성(기본적으로 활성), 액세스 권한을 부여할 특정 역할 또는 사용자를 선택합니다. 모든 역할 및 사용자에게 액세스 권한을 부여하려면 해당 **[!UICONTROL 모두 선택]** 있습니다.
 
-   * 선택 **[!UICONTROL 저장]**. 변경 확인이 표시되면 **[!UICONTROL 돌아가기]**.
+   * **[!UICONTROL 저장]**&#x200B;을 선택합니다. 변경 확인이 표시되면 **[!UICONTROL 돌아가기]**.
 
 
 1. 선택 **[!UICONTROL 목록]** 을 눌러 *스크립트* 목록 페이지를 참조하십시오.
@@ -355,7 +355,7 @@ Adobe Sign 통합 번들은 이미 많은 표준을 사용하여 Adobe Sign 계�
 
    >[!NOTE]
    >
-   >자세한 내용은 *[사용자 정의 레코드 유형에 대한 권한 목록 설정](https://system.[!DNL NetSuite].com/app/help/helpcenter.nl?fid=section_N2879931.html)* 의 항목 [!DNL NetSuite] 자세한 내용은 도움말 센터를 참조하십시오.
+   >자세한 내용은 *[사용자 정의 레코드 유형에 대한 권한 목록 설정](https://system.[!DNL NetSuite].com/app/help/helpcenter.nl?fid=section_N2879931.html)* 자세한 내용은 NetSuite 도움말 센터 항목을 참조하십시오.
 
    1. 다음에서 역할을 선택합니다. *역할* 목록.
    1. 설정 *레벨* 에 **[!UICONTROL 전체]**.
