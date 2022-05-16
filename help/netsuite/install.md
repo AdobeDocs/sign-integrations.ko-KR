@@ -8,7 +8,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: 581b336b4a3610cfe3fd0d92f2a4eebe55b89b27
+source-git-commit: 568d001a05bd0e642036b4a73067689e987c02ba
 workflow-type: tm+mt
 source-wordcount: '4870'
 ht-degree: 1%
@@ -581,7 +581,7 @@ Quote 를 볼 때 **[!UICONTROL Send for Signature]**. 계약에 첨부된 견�
 
 ## 문제 해결
 
-### 업데이트 진행률 확인  {#determineprogress}
+### 업데이트 진행률 확인 {#determineprogress}
 
 업데이트가 오래 걸리는 것으로 나타나면 Adobe Sign 번들 설치 스크립트의 실행 로그 하위 탭을 확인하여 다음과 같이 업데이트 진행률을 확인할 수 있습니다.
 
