@@ -9,14 +9,14 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: 076c575d179f576366c1d9a76be0a582154574b1
+source-git-commit: c164692d78608c436d136caef44b19fe8d37b9d8
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
 
 ---
 
-# Adobe Acrobat Sign for [!DNL Veeva Vault]: 사용 안내서 {#veeva-vault-user-guide}
+# Adobe Acrobat Sign [!DNL Veeva Vault]: 사용 안내서 {#veeva-vault-user-guide}
 
 [**Adobe Acrobat Sign 지원 문의**](https://adobe.com/go/adobesign-support-center_kr)
 
@@ -36,9 +36,9 @@ Adobe Acrobat Sign과 [!DNL Veeva Vault] 문서 및 서명 워크플로우를 �
 * 20개 이상의 언어로 로그인하고 전 세계 50개 이상의 로케일에서 팩스 회신 서비스를 지원합니다.
 * 전송 옵션에 대해 재사용 가능한 계약 템플릿을 만듭니다.
 
-## Adobe Acrobat 서명을 사용하여 계약 보내기 [!DNL Veeva Vault] {#send-sign-vault-agreement}
+## Adobe Acrobat Sign을 사용하여 계약 보내기 [!DNL Veeva Vault] {#send-sign-vault-agreement}
 
-Veeva용 Adobe Acrobat Sign을 사용하여 계약서를 보내려면:
+Veeva용 Adobe Acrobat Sign을 사용하여 계약서를 보내려면 다음을 수행하십시오.
 
 1. 다음으로 이동 [[!DNL Veeva Vault] 로그인 페이지](https://login.veevavault.com/) 사용자 이름과 암호를 입력합니다. 아래와 같이 저장소의 홈 페이지가 열립니다.
 
@@ -54,11 +54,12 @@ Veeva용 Adobe Acrobat Sign을 사용하여 계약서를 보내려면:
 
 1. 표시되는 대화 상자에서 **[!UICONTROL 유형]** 만큼 *[!UICONTROL 임상]* 그런 다음 **[!UICONTROL 하위 유형]** 및 **[!UICONTROL 분류]**&#x200B;를 클릭합니다(필요한 경우).
 
+
    ![](images/choose-document-type.png)
 
 1. 대화 상자를 닫으려면 **[!UICONTROL 확인]**.
 
-1. 선택 **[!UICONTROL 다음]**.
+1. **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
 1. 표시되는 창에서 메타데이터 섹션의 모든 필수 필드를 채우고 **[!UICONTROL 저장]**.
 
@@ -94,7 +95,7 @@ Veeva용 Adobe Acrobat Sign을 사용하여 계약서를 보내려면:
 
    ![](images/iframe.png)
 
-   **참고:** 전송자의 전자 메일에 대한 Adobe Acrobat Sign 사용자 계정이 없는 경우 아래와 같이 iFrame 창에 메시지가 표시됩니다. 또한 사용자에게 계정을 활성화하는 지침이 포함된 이메일을 보냅니다.
+   **참고:** 보낸 사람의 전자 메일에 대한 Adobe Acrobat Sign 사용자 계정이 없는 경우 iFrame 창에 아래와 같은 메시지가 표시됩니다. 또한 사용자에게 계정을 활성화하는 지침이 포함된 이메일을 보냅니다.
 
    ![](images/iFrame-registration-message.png)
 
@@ -103,7 +104,7 @@ Veeva용 Adobe Acrobat Sign을 사용하여 계약서를 보내려면:
    그러나 *Sign 사용자 자동 프로비저닝* 기능이 비활성화되고, Adobe Acrobat Sign 사용자 생성이 실패하며, iFrame 창에 사용자에게 Adobe Acrobat Sign 계정 관리자에게 문의하라는 메시지가 표시됩니다. Adobe Acrobat Sign 계정 관리자는 다음 작업 중 하나를 수행할 수 있습니다.
 
    * 활성화 *Sign 사용자 자동 프로비저닝* 계정에서 사용할 수 있습니다.
-   * Veeva Vault Adobe Acrobat Sign 통합 기능을 사용하기 전에 Adobe Acrobat Sign에서 사용자를 작성합니다.
+   * Veeva Vault Adobe Acrobat Sign 통합을 사용하기 전에 Adobe Acrobat Sign에서 사용자를 작성합니다.
 
    ![](images/iFrame-contact-administrator.png)
 

@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c60fd19fa52fb203fd19da69d58792ef6fb88eec
+source-git-commit: c164692d78608c436d136caef44b19fe8d37b9d8
 workflow-type: tm+mt
 source-wordcount: '3931'
 ht-degree: 3%
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ## 개요 {#overview}
 
-이 문서에서는 Adobe Acrobat Sign과 을 통합하는 방법을 설명합니다. [!DNL Veeva Vault] 플랫폼 [!DNL Veeva Vault] 생명 과학 업계를 위해 개발된 ECM(엔터프라이즈 컨텐츠 관리) 플랫폼입니다. &quot;저장소&quot;는 규정 파일 작성, 연구 보고, 애플리케이션 부여, 일반 계약 등을 위한 일반적인 용도를 갖춘 컨텐츠 및 데이터 저장소입니다. 단일 엔터프라이즈에는 별도로 유지 관리해야 하는 여러 &#39;저장소&#39;가 있을 수 있습니다.
+이 문서에서는 Adobe Acrobat Sign과 [!DNL Veeva Vault] 플랫폼 [!DNL Veeva Vault] 생명 과학 업계를 위해 개발된 ECM(엔터프라이즈 컨텐츠 관리) 플랫폼입니다. &quot;저장소&quot;는 규정 파일 작성, 연구 보고, 애플리케이션 부여, 일반 계약 등을 위한 일반적인 용도를 갖춘 컨텐츠 및 데이터 저장소입니다. 단일 엔터프라이즈에는 별도로 유지 관리해야 하는 여러 &#39;저장소&#39;가 있을 수 있습니다.
 
 통합을 완성하기 위한 고급 단계는 다음과 같습니다.
 
@@ -52,7 +52,7 @@ Adobe Acrobat Sign 구성 방법 [!DNL Vault], 라는 새 그룹 *Adobe Sign 관
 
 ### 2단계. 패키지 배포 {#deploy-package}
 
-[패키지 배포](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration.zip) 단계를 따릅니다. 배포되면 패키지는 다음을 생성합니다.
+[패키지 배포](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration-veeva.zip) 단계를 따릅니다. 배포되면 패키지는 다음을 생성합니다.
 
 * 사용자 정의 개체: Signature 객체, Signatory 객체, Signature Event 객체, Process Locker 객체
 * 서명 개체 페이지 레이아웃
@@ -103,8 +103,8 @@ Adobe Acrobat Sign 구성 방법 [!DNL Vault], 라는 새 그룹 *Adobe Sign 관
 | 필드 | 레이블 | 유형 | 설명 |
 |:---|:---|:---|:------- | 
 | email__c | 전자 메일 | 문자열(120) | Adobe Acrobat Sign의 고유한 계약 ID를 보관합니다. |
-| external_id__c | 참가자 ID | 문자열(80) | Adobe Acrobat Sign 고유 참가자의 식별자를 보관합니다. |
-| name__v | 이름 | 문자열(128) | Adobe Acrobat Sign 참가자의 이름을 보유합니다. |
+| external_id__c | 참가자 ID | 문자열(80) | Adobe Acrobat Sign 고유 참가자 식별자를 보관합니다. |
+| name__v | 이름 | 문자열(128) | Adobe Acrobat Sign 참가자 이름을 보유합니다. |
 | order__c | 순서 | 숫자 | Adobe Acrobat Sign 계약 참가자의 주문 번호를 보유하고 있습니다. |
 | role__c | 역할 | 문자열(30) | Adobe Acrobat Sign 계약 참가자의 역할을 보유합니다. |
 | signature__c | 서명 | 개체(서명) | 서명 상위 레코드에 대한 참조를 보유합니다. |
@@ -121,11 +121,11 @@ Adobe Acrobat Sign 구성 방법 [!DNL Vault], 라는 새 그룹 *Adobe Sign 관
 
 | 필드 | 레이블 | 유형 | 설명 |
 |:---|:---|:---|:-------- | 
-| acting_user_email__c | 작업 중인 사용자 전자 메일 | 문자열 | 이벤트를 생성하게 한 작업을 수행한 Adobe Acrobat Sign 사용자의 전자 메일을 보관합니다. |
+| acting_user_email__c | 작업 중인 사용자 전자 메일 | 문자열 | 이벤트를 생성하게 한 작업을 수행한 Adobe Acrobat Sign 사용자의 이메일을 보관합니다. |
 | acting_user_name__c | 대리 사용자 이름 | 문자열 | 이벤트를 생성하게 한 작업을 수행한 Adobe Acrobat Sign 사용자의 이름을 보관합니다. |
 | description__c | 설명 | 문자열 | Adobe Acrobat Sign 이벤트의 설명을 보관합니다. |
 | event_date__c | 이벤트 날짜 | DateTime | Adobe Acrobat Sign 이벤트의 날짜 및 시간을 보관합니다. |
-| event_type__c | 이벤트 유형 | 문자열 | Adobe Acrobat Sign 이벤트의 유형을 보관합니다. |
+| event_type__c | 이벤트 유형 | 문자열 | Adobe Acrobat Sign 이벤트의 유형을 보유합니다. |
 | name__v | 이름 | 문자열 | 자동 생성된 이벤트 이름 |
 | participant_comment__c | 참가자 주석 | 문자열 | Adobe Acrobat Sign 참가자의 주석이 있는 경우 이를 보관합니다 |
 | participant_email__c | 참여자 전자 메일 | 문자열 | Adobe Acrobat Sign 참가자의 전자 메일을 보관합니다. |
@@ -185,7 +185,7 @@ Adobe Sign 통합 작업 로그 개체 필드
 
    ![이미지](images/select-columns-to-display.png)
 
-#### **Adobe Acrobat 서명 문서에 대한 참가자 및 감사 내역 보기** {#view-participants-audit-history}
+#### **Adobe Acrobat Sign 문서에 대한 참가자 및 감사 내역 보기** {#view-participants-audit-history}
 
 * Adobe Acrobat Sign 문서에 대한 참가자 및 감사 내역을 보려면 문서의 &#39;Adobe 서명&#39; 섹션에서 링크를 선택합니다.
 
@@ -231,7 +231,7 @@ Adobe Acrobat Sign 통합의 Vault 시스템 계정 사용자는 다음을 수�
 
 ### 5단계. 문서 유형 그룹 구성 {#create-document-type-group}
 
-Adobe Acrobat Sign 패키지를 배포하면 &#39;Adobe Sign 문서&#39;라는 문서 유형 그룹 레코드가 만들어집니다.
+Adobe Acrobat Sign 패키지를 배포하면 &#39;Adobe Sign 문서&#39;라는 문서 유형 그룹 레코드가 생성됩니다.
 
 ![문서 유형 그룹 이미지](images/document-type-groups.png)
 
@@ -287,7 +287,7 @@ Adobe Acrobat Sign 프로세스에 적합한 모든 문서 분류에 대해 이 
 
 ### 8단계. 문서 변환 선언 {#declare-renditions}
 
-새 변환 유형 *Adobe Sign 변환 (adobe_sign_rendition__c)* 자격 증명 모음 통합에서 서명된 PDF 문서를 Adobe Acrobat Sign에 업로드하는 데 사용됩니다. Adobe Sign 서명에 적합한 각 문서 유형에 대해 Adobe Acrobat 변환을 선언해야 합니다.
+새 변환 유형 *Adobe Sign 변환 (adobe_sign_rendition__c)* 저장소 통합에서 서명된 PDF 문서를 Adobe Acrobat Sign에 업로드하는 데 사용됩니다. Adobe Sign 서명에 적합한 각 문서 유형에 대해 Adobe Acrobat 변환을 선언해야 합니다.
 
 ![렌디션 유형 이미지](images/rendition-type.png)
 
@@ -299,7 +299,7 @@ Adobe Acrobat Sign 프로세스에 적합한 모든 문서 분류에 대해 이 
 
 ### 9단계. 웹 동작 업데이트 {#web-actions}
 
-Adobe Acrobat Sign 및 Vault 통합을 사용하려면 다음 두 가지 웹 동작을 만들고 구성해야 합니다.
+Adobe Acrobat Sign 및 Vault 통합에서는 다음 두 가지 웹 작업을 작성하고 구성해야 합니다.
 
 * **Adobe Sign 만들기**: Adobe Acrobat Sign 계약을 생성하거나 표시합니다.
 
@@ -307,7 +307,7 @@ Adobe Acrobat Sign 및 Vault 통합을 사용하려면 다음 두 가지 웹 동
 
    ![Adobe Sign 만들기 이미지](images/create-adobe-sign.png)
 
-* **Adobe Sign 취소**: Adobe Acrobat Sign의 기존 계약을 취소하고 문서 상태를 초기 상태로 되돌립니다.
+* **Adobe Sign 취소**: Adobe Acrobat Sign에서 기존 계약을 취소하고 문서 상태를 초기 상태로 되돌립니다.
 
    유형: 문서 대상: 자격 증명 모음 내 표시: 사후 메시지 URL을 통해 사후 세션 자격 증명 사용: : <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
@@ -355,7 +355,7 @@ Adobe Acrobat Sign 계약 주기에는 다음과 같은 상태가 있습니다.
 
 3. 아래 나열된 상태에 사용자 작업을 추가합니다.
 
-   저장소 문서가 Adobe Acrobat Sign으로 전송될 때 그 상태는 계약이 있는 상태에 해당해야 합니다. 이렇게 하려면 Adobe 서명이 가능한 문서에 사용되는 모든 주기에서 다음 상태를 추가합니다.
+   보관소 문서가 Adobe Acrobat Sign으로 전송될 때 그 상태는 계약서의 상태와 일치해야 합니다. 이렇게 하려면 Adobe 서명이 가능한 문서에 사용되는 모든 주기에서 다음 상태를 추가합니다.
 
    * **Adobe 서명 전** (검토됨): Adobe Acrobat Sign으로 문서를 보낼 수 있는 상태에 대한 자리 표시자 이름입니다. 문서 유형에 따라 [초안] 상태 또는 [검토됨]이 될 수 있습니다. 문서 상태 레이블은 고객의 요구 사항에 따라 맞춤화할 수 있습니다. Adobe 이전 서명 상태는 다음 두 가지 사용자 작업을 정의해야 합니다.
 
@@ -415,10 +415,10 @@ Adobe Acrobat Sign 계약 주기에는 다음과 같은 상태가 있습니다.
 
       ![이미지](images/in-adobe-signing-2.png)
 
-      * **서명된 Adobe(승인됨)**: 문서가 Adobe Acrobat Sign에 업로드되고 계약이 완료되었음을 나타내는 상태의 자리 표시자 이름(서명됨 또는 승인됨 상태)입니다. 필수 상태이며 승인됨과 같은 기존 주기 상태일 수 있습니다.
+      * **서명된 Adobe(승인됨)**: 문서가 Adobe Acrobat Sign에 업로드되고 계약이 완료되었음을 나타내는 상태(서명됨 또는 승인됨 상태)의 자리 표시자 이름입니다. 필수 상태이며 승인됨과 같은 기존 주기 상태일 수 있습니다.
 이 상태에는 사용자 작업이 필요하지 않습니다. Adobe Sign 관리자 역할로 다음을 수행할 수 있는 보안이 있어야 합니다. 문서를 보고, 콘텐츠를 보고, 필드를 편집합니다.
 
-   다음 다이어그램은 &#39;Adobe 이전 서명&#39; 상태가 초안인 Adobe Acrobat 서명 계약과 보관 문서 상태 간의 매핑을 보여 줍니다.
+   다음 다이어그램은 &#39;Adobe 이전 서명&#39; 상태가 초안인 Adobe Acrobat Sign 계약과 보관 문서 상태 간의 매핑을 보여 줍니다.
 
    ![이미지](images/sign-vault-mappings.png)
 
@@ -440,14 +440,14 @@ Adobe Acrobat Sign 계약 주기에는 다음과 같은 상태가 있습니다.
 
 ![이미지](images/create-cancel-message.png)
 
-## Connect [!DNL Veeva Vault] 미들웨어를 사용하여 Adobe Acrobat 서명으로 {#connect-middleware}
+## Connect [!DNL Veeva Vault] 미들웨어를 사용하여 Adobe Acrobat Sign으로 {#connect-middleware}
 
 다음에 대한 설정을 완료한 후 [!DNL Veeva Vault] 및 Adobe Acrobat Sign 관리 계정은 관리자가 미들웨어를 사용하여 두 계정 간에 연결을 만들어야 합니다. 추가 [!DNL Veeva Vault] 및 Adobe Acrobat Sign 계정 연결은 Adobe Acrobat Sign Identity에 의해 시작된 다음 저장하는 데 사용됩니다.[!DNL Veeva Vault] 있습니다.
 시스템 보안 및 안정성을 위해 관리자는 전용 [!DNL Veeva Vault] 시스템/서비스/유틸리티 계정(예: `adobe.for.veeva@xyz.com`에 대한 개인 사용자 계정 대신 `bob.smith@xyz.com`.
 
-Adobe Acrobat Sign 계정 관리자는 아래 단계에 따라 연결해야 합니다 [!DNL Veeva Vault] 미들웨어를 사용하여 Adobe Acrobat 서명하려면:
+Adobe Acrobat Sign 계정 관리자는 아래 단계에 따라 연결해야 합니다 [!DNL Veeva Vault] 미들웨어를 사용하여 Adobe Acrobat Sign으로
 
-1. 다음으로 이동 [Adobe Acrobat Sign for [!DNL Veeva Vault] 홈 페이지](https://static.adobesigncdn.com/veevavaultintsvc/index.html).
+1. 다음으로 이동 [Adobe Acrobat Sign [!DNL Veeva Vault] 홈 페이지](https://static.adobesigncdn.com/veevavaultintsvc/index.html).
 1. 선택 **[!UICONTROL 로그인]** 을 클릭합니다.
 
    ![미들웨어 로그인 이미지](images/middleware_login.png)
@@ -474,7 +474,7 @@ Adobe Acrobat Sign 계정 관리자는 아래 단계에 따라 연결해야 합�
 
 1. 열린 연결 추가 대화 상자에서 다음을 포함하여 필요한 세부 정보를 입력합니다. [!DNL Veeva Vault] 자격 증명
 
-   Adobe Acrobat Sign 자격 증명은 초기 Adobe Sign 로그인부터 자동으로 채워집니다.
+   Adobe Acrobat Sign 자격 증명은 초기 Adobe Sign 로그인에서 자동으로 채워집니다.
 
    ![이미지](images/middleware_addconnection.png)
 
