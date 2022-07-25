@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c164692d78608c436d136caef44b19fe8d37b9d8
+source-git-commit: 163c74a2e03aeaa0627d972b791166d4ea4e66a6
 workflow-type: tm+mt
-source-wordcount: '3931'
+source-wordcount: '3933'
 ht-degree: 3%
 
 ---
@@ -52,7 +52,7 @@ Adobe Acrobat Sign 구성 방법 [!DNL Vault], 라는 새 그룹 *Adobe Sign 관
 
 ### 2단계. 패키지 배포 {#deploy-package}
 
-[패키지 배포](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration-veeva.zip) 단계를 따릅니다. 배포되면 패키지는 다음을 생성합니다.
+[패키지 배포](https://helpx.adobe.com/content/dam/help/en/sign-integrations-new/veeva-vault/PKG-AdobeSign-Integration-Veeva.zip) 단계를 따릅니다. 배포되면 패키지는 다음을 생성합니다.
 
 * 사용자 정의 개체: Signature 객체, Signatory 객체, Signature Event 객체, Process Locker 객체
 * 서명 개체 페이지 레이아웃
@@ -102,7 +102,7 @@ Adobe Acrobat Sign 구성 방법 [!DNL Vault], 라는 새 그룹 *Adobe Sign 관
 
 | 필드 | 레이블 | 유형 | 설명 |
 |:---|:---|:---|:------- | 
-| email__c | 전자 메일 | 문자열(120) | Adobe Acrobat Sign의 고유한 계약 ID를 보관합니다. |
+| email__c | 이메일 | 문자열(120) | Adobe Acrobat Sign의 고유한 계약 ID를 보관합니다. |
 | external_id__c | 참가자 ID | 문자열(80) | Adobe Acrobat Sign 고유 참가자 식별자를 보관합니다. |
 | name__v | 이름 | 문자열(128) | Adobe Acrobat Sign 참가자 이름을 보유합니다. |
 | order__c | 순서 | 숫자 | Adobe Acrobat Sign 계약 참가자의 주문 번호를 보유하고 있습니다. |
