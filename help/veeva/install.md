@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c09759f2455b476fd1093d845cee4f5c3c3601d7
+source-git-commit: 00db62c894df93abac31bf8196730382d54e8fa0
 workflow-type: tm+mt
-source-wordcount: '4169'
+source-wordcount: '4176'
 ht-degree: 3%
 
 ---
@@ -320,7 +320,7 @@ Adobe Acrobat 서명에 적합한 각 문서 유형에 대해 원본 변환을 �
 
 디지털 서명 및 감사 추적과 함께 문서 내용을 보려면 디지털 서명용 관리 UI에서 &#39;Acrobat Sign 렌디션 표시&#39;를 사용하여 &#39;감사 보고서를 서명된 렌디션에 첨부&#39;를 선택하지 마십시오.
 
-서명된 변환에서 별도의 변환으로 Adobe 감사 추적을 다운로드하거나 볼 수 있습니다.
+&quot;Adobe 감사 내역 변환&quot; 기능을 사용하여 서명된 변환에서 별도의 변환으로 Adobe 감사 추적을 다운로드하거나 볼 수 있습니다.
 
 ![이미지](images/audit-trail-rendition-setup-4.png)
 
