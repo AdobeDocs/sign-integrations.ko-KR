@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 163c74a2e03aeaa0627d972b791166d4ea4e66a6
+source-git-commit: 08d55f79fd4fff8f13dc23b9d155e501ca038be1
 workflow-type: tm+mt
-source-wordcount: '3933'
+source-wordcount: '4169'
 ht-degree: 3%
 
 ---
@@ -289,13 +289,40 @@ Adobe Acrobat Sign 프로세스에 적합한 모든 문서 분류에 대해 이 
 
 새 변환 유형 *Adobe Sign 변환 (adobe_sign_rendition__c)* 저장소 통합에서 서명된 PDF 문서를 Adobe Acrobat Sign에 업로드하는 데 사용됩니다. Adobe Sign 서명에 적합한 각 문서 유형에 대해 Adobe Acrobat 변환을 선언해야 합니다.
 
+Adobe Acrobat 서명에 적합한 각 문서 유형에 대해 원본 변환을 선언해야 합니다.
+
 ![렌디션 유형 이미지](images/rendition-type.png)
 
 ![이미지](images/edit-details-clinical.png)
 
-새 변환 유형 *원본 변환(original_rendition__c)* 볼트 통합에서 서명된 문서를 볼 수 있는 변환으로 가져온 경우 원래 볼 수 있는 변환을 저장하는 데 사용해야 하는 변환의 이름으로 사용합니다.
+새 변환 유형 *원본 변환* (original_rendition__c)는 Vault 통합에 의해 서명된 문서를 볼 수 있는 변환으로 가져올 경우 원래 볼 수 있는 변환을 저장하는 데 사용해야 하는 변환의 이름으로 사용됩니다.
 
 ![이미지](images/original-rendition.png)
+
+선택적으로 저장소는 새로운 변환 유형인 Adobe 감사 내역 변환(adobe_audit_trail_rendition__c)을 가질 수 있으며, 이는 저장소 통합에서 Adobe 감사 내역 보고서를 저장하는 데 사용됩니다.
+
+아래 단계에 따라 Adobe 감사 내역 변환을 설정합니다.
+
+1. 이동 **변환 유형** > **새 변환 유형 만들기**.
+새 변환 유형을 감사 추적 변환(adobe_audit_trail_rendition__c)으로 작성합니다.
+
+   ![이미지](images/audit-trail-rendition-setup-1.png)
+
+1. 문서의 Adobe 감사 내역 변환을 보고 다운로드하려면 *Adobe 감사 내역 변환* Adobe Acrobat 서명을 받을 수 있는 각 문서 유형
+
+   ![이미지](images/audit-trail-rendition-setup-2.png)
+
+**참고**: 다음을 수행하여 서명된 변환에 감사 보고서를 첨부하도록 선택할 수 있습니다. **[!UICONTROL 서명된 변환에 감사 보고서 첨부]** 변환을 표시할 수 있는 ****[!UICONTROL Acrobat Sign 변환 표시]**** 관리 UI 설정의 옵션입니다.
+
+![이미지](images/audit-trail-rendition-setup-3.png)
+
+사용자가 위의 설정으로 디지털 서명 계약을 선택하면 Adobe Acrobat Sign이 디지털 서명된 PDF 보고서와 감사 내역 보고서를 결합하기 위해 PDF Portfolio을 사용하고 있음을 나타내는 메시지(아래 참조)가 표시됩니다.
+
+디지털 서명 및 감사 추적과 함께 문서 내용을 보려면 디지털 서명용 관리 UI에서 &#39;Acrobat Sign 렌디션 표시&#39;를 사용하여 &#39;감사 보고서를 서명된 렌디션에 첨부&#39;를 선택하지 마십시오.
+
+서명된 변환에서 별도의 변환으로 Adobe 감사 추적을 다운로드하거나 볼 수 있습니다.
+
+![이미지](images/audit-trail-rendition-setup-4.png)
 
 ### 9단계. 웹 동작 업데이트 {#web-actions}
 
