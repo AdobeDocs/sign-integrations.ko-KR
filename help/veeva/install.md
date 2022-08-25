@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 08d55f79fd4fff8f13dc23b9d155e501ca038be1
+source-git-commit: c09759f2455b476fd1093d845cee4f5c3c3601d7
 workflow-type: tm+mt
 source-wordcount: '4169'
 ht-degree: 3%
@@ -289,13 +289,13 @@ Adobe Acrobat Sign 프로세스에 적합한 모든 문서 분류에 대해 이 
 
 새 변환 유형 *Adobe Sign 변환 (adobe_sign_rendition__c)* 저장소 통합에서 서명된 PDF 문서를 Adobe Acrobat Sign에 업로드하는 데 사용됩니다. Adobe Sign 서명에 적합한 각 문서 유형에 대해 Adobe Acrobat 변환을 선언해야 합니다.
 
-Adobe Acrobat 서명에 적합한 각 문서 유형에 대해 원본 변환을 선언해야 합니다.
-
 ![렌디션 유형 이미지](images/rendition-type.png)
 
 ![이미지](images/edit-details-clinical.png)
 
 새 변환 유형 *원본 변환* (original_rendition__c)는 Vault 통합에 의해 서명된 문서를 볼 수 있는 변환으로 가져올 경우 원래 볼 수 있는 변환을 저장하는 데 사용해야 하는 변환의 이름으로 사용됩니다.
+
+Adobe Acrobat 서명에 적합한 각 문서 유형에 대해 원본 변환을 선언해야 합니다.
 
 ![이미지](images/original-rendition.png)
 
