@@ -2,10 +2,10 @@
 user-guide-title: Adobe Sign 통합 안내서
 index: true
 role: Leader
-source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
+source-git-commit: 87818d90ab5e223d2d154f4449702e1c4c23473a
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 35%
+source-wordcount: '68'
+ht-degree: 33%
 
 ---
 
@@ -13,7 +13,6 @@ ht-degree: 35%
 # Adobe Sign 통합 안내서 {#using}
 
 + [Adobe Sign 통합](home.md)
-+ [새로운 기능](whats-new.md)
 + [제품 버전 및 수명 주기](versions.md)
 + Adobe Sign [!DNL Workday] {#workday}
    + [설치 안내서](workday/install.md)
