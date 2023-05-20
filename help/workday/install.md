@@ -1,6 +1,6 @@
 ---
 title: Workday 설치 안내서
-description: Adobe Sign과 Workday 통합을 활성화시키기 위한 설치 안내서
+description: Workday과 Adobe Sign 통합 활성화를 위한 설치 안내서
 uuid: 56478222-fe66-4fa5-aac3-0ecdf2863197
 product: Adobe Sign
 topic-tags: EchoSign/Integrations
@@ -14,14 +14,14 @@ topic: Integrations
 exl-id: 8f12b524-2123-45d4-98d5-b2b23580a5ea
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
-source-wordcount: '1133'
-ht-degree: 19%
+source-wordcount: '1131'
+ht-degree: 0%
 
 ---
 
 # [!DNL Workday] 설치 안내서{#workday-installation-guide}
 
-[**Adobe Sign 지원 문의**](https://adobe.com/go/adobesign-support-center_kr)
+[**Adobe Sign 지원 문의**](https://adobe.com/go/adobesign-support-center)
 
 ## 개요 {#overview}
 
@@ -43,7 +43,7 @@ ht-degree: 19%
 
 Adobe Sign을 처음 사용하며 기존 로그인이 없는 고객의 경우 Adobe 온보딩 전문가가 계정(Adobe Sign)을 [!DNL Workday]. 완료되면 아래와 같이 확인 이메일을 수신하게 됩니다.
 
-![Adobe Sign에서 보낸 시작 이메일 이미지](images/welcome-email-2020.png)
+![Adobe Sign 시작 이메일 이미지](images/welcome-email-2020.png)
 
 전자 메일의 지침에 따라 계정을 초기화하고 Adobe Sign에 액세스해야 합니다. [!UICONTROL 홈] 페이지를 엽니다.
 
@@ -61,11 +61,11 @@ Adobe Sign 구성 방법 [!DNL Workday]Adobe Sign 시스템에서 다음 두 개
 
 Adobe Sign에서 사용자를 만들려면:
 
-1. 계정 관리자로 Adobe Sign에 로그인합니다..
+1. 계정 관리자로 Adobe Sign에 로그인합니다.
 1. 다음으로 이동 **[!UICONTROL 계정]** > **[!UICONTROL 사용자]**.
 1. 오른쪽 상단의 ![플러스 아이콘 이미지](images/icon_plus.png) 을 눌러 새 사용자를 생성합니다.
 
-   ![새 사용자 만들기로 이동 경로 이미지](images/navigate-to-group-unbranded.png)
+   ![새 사용자를 만들기 위한 탐색 경로 이미지](images/navigate-to-group-unbranded.png)
 
 1. 열리는 대화 상자에서 새 사용자 세부 정보를 입력합니다.
 
@@ -76,7 +76,7 @@ Adobe Sign에서 사용자를 만들려면:
 
    ![사용자 만들기 패널](images/create-user.png)
 
-1. **[!UICONTROL 저장]**&#x200B;을 클릭합니다.
+1. 클릭 **[!UICONTROL 저장]**.
 
    다시 [!UICONTROL 사용자] 새 사용자를 나열하는 페이지 **[!UICONTROL 생성됨]** 상태.
 
@@ -87,7 +87,7 @@ Adobe Sign에서 사용자를 만들려면:
 1. 새 사용자의 전자 메일에 로그인합니다.
 2. &quot;Adobe Sign 시작&quot; 이메일을 찾습니다.
 3. 메시지가 표시된 위치를 클릭합니다. **[!UICONTROL 암호를 설정하려면 여기를 클릭하십시오.]**.
-4. 암호 설정.
+4. 암호를 설정합니다.
 
 전자 메일 주소를 확인하면 사용자의 상태가 [!UICONTROL 생성됨] 에 [!UICONTROL 활성].
 
@@ -103,7 +103,7 @@ Adobe Sign에서 사용자를 만들려면:
    그러면 [!UICONTROL 편집] 페이지를 참조하십시오.
 
 3. 확인 **[!UICONTROL 그룹 관리자]**.
-4. **[!UICONTROL 저장]**&#x200B;을 클릭합니다.
+4. 클릭 **[!UICONTROL 저장]**.
 
 ![](images/user-permissions-edit1-575.png)
 
@@ -115,11 +115,11 @@ Adobe Sign에서 사용자를 만들려면:
 >
 >Adobe Sign은 전체에 걸쳐 Adobe Document Cloud 로 표시됩니다. [!DNL Workday] 있습니다.
 
-신뢰할 수 있는 관계를 설정하려면 다음을 수행하십시오.
+신뢰 관계를 설정하려면
 
 1. 로그인 [!DNL Workday] 계정 관리자로 로그인합니다.
 1. 열기 **[!UICONTROL 테넌트 설정 편집 - 비즈니스 프로세스]** 페이지를 엽니다.
-1. [!UICONTROL eSignature 구성] 섹션을 찾습니다.
+1. 다음 [!UICONTROL eSignature 구성] 섹션:
 
    ![](images/esignature_configurations.png)
 
@@ -144,11 +144,11 @@ Adobe Sign에서 사용자를 만들려면:
 * 동일한 업무 프로세스 내의 문서 생성 단계를 통해 생성된 문서
 * 다음을 사용하여 만든 서식 있는 보고서 [!DNL Workday] 보고서 디자이너
 
-다음 문서를 [Adobe 텍스트 태그](https://adobe.com/go/adobesign_text_tag_guide_kr) Adobe 서명 특정 구성 요소의 모양 및 위치를 제어합니다. 비즈니스 프로세스 정의 내에 문서 원본이 지정되어야 합니다. 비즈니스 프로세스가 실행되는 동안 임시 문서를 업로드할 수 없습니다.
+다음 문서를 [Adobe 텍스트 태그](https://adobe.com/go/adobesign_text_tag_guide) Adobe 서명 특정 구성 요소의 모양 및 위치를 제어합니다. 비즈니스 프로세스 정의 내에 문서 원본을 지정해야 합니다. 업무 프로세스가 실행되는 동안에는 임시 문서를 업로드할 수 없습니다.
 
-문서 검토 단계에서 Adobe Sign을 사용하는 것 이외에 고유한 것은 서명자 그룹을 일련화하는 기능입니다. 이 기능 덕분에 차례로 서명하는 역할 기반의 그룹을 지정할 수 있습니다. Adobe Sign은 병렬 서명 그룹을 지원하지 않습니다.
+문서 검토 단계에서 Adobe Sign을 사용하는 것 이외에 고유한 것은 서명자 그룹을 일련화하는 기능입니다. 이렇게 하면 차례로 로그인하는 역할 기반 그룹을 지정할 수 있습니다. Adobe Sign은 병렬 서명 그룹을 지원하지 않습니다.
 
-문서 검토 단계 구성에 대한 자세한 내용은 [빠른 시작 안내서](https://adobe.com//go/adobesign_workday_quick_start){target=&quot;_blank&quot;}.
+문서 검토 단계 구성에 대한 자세한 내용은 [빠른 시작 안내서](https://adobe.com//go/adobesign_workday_quick_start){target="_blank"}.
 
 ## 지원 {#support}
 
@@ -165,14 +165,14 @@ Adobe Sign에서 사용자를 만들려면:
 
 ### Adobe Sign 지원 {#adobe-sign-support}
 
-Adobe Sign은 통합 파트너로서, 통합 과정에서 서명을 받지 못하거나 대기 중인 서명의 알림에 실패하는 경우에 문의해야 합니다.
+Adobe Sign은 통합 파트너이며, 통합에서 서명을 받지 못하거나 보류 중인 서명 통지에 실패하는 경우 연락해야 합니다.
 
-Adobe Sign 고객은 담당 고객 성공 관리자(CSM)에게 지원을 요청해야 합니다. 또는 Adobe 기술 지원(전화: 1-866-318-4100)에 전화하여 제품 목록이 나오면 4번에 이어 2번(전화 안내에 따라)을 누르면 됩니다.
+Adobe Sign 고객은 해당 고객 성공 관리자(CSM)에 지원을 요청해야 합니다. 또는 전화로 Adobe 기술 지원 팀에 문의할 수 있습니다. 1-866-318-4100, 제품 목록을 기다린 후 다음을 입력합니다. 4와 2를 차례로 선택합니다(프롬프트에 따라).
 
 * [문서에 Adobe 텍스트 태그 추가하기](https://adobe.com/go/adobesign_text_tag_guide)
 * [문서 구성 및 예제 검토](https://www.adobe.com//go/adobesign_workday_quick_start)
 
-## 일반적인 질문 {#faq}
+## 일반 질문 {#faq}
 
 ### 상태가 내부에서 업데이트되지 않는 이유는 무엇입니까? [!DNL Workday] 문서가 완전히 서명된 경우에도 {#why-is-the-status-not-being-updated-within-workday-even-the-document-is-fully-signed}
 

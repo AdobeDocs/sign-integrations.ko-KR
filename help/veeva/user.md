@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Adobe Acrobat Sign [!DNL Veeva Vault]: 사용 안내서 {#veeva-vault-user-guide}
 
-[**Adobe Acrobat Sign 지원 문의**](https://adobe.com/go/adobesign-support-center_kr)
+[**Adobe Acrobat Sign 지원 문의**](https://adobe.com/go/adobesign-support-center)
 
 이 문서는 [!DNL Veeva Vault] 고객은 Adobe Acrobat Sign for [!DNL Veeva Vault] 계약서 전송을 위한 통합.
 
@@ -59,7 +59,7 @@ Veeva용 Adobe Acrobat Sign을 사용하여 계약서를 보내려면 다음을 
 
 1. 대화 상자를 닫으려면 **[!UICONTROL 확인]**.
 
-1. **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+1. 선택 **[!UICONTROL 다음]**.
 
 1. 표시되는 창에서 메타데이터 섹션의 모든 필수 필드를 채우고 **[!UICONTROL 저장]**.
 

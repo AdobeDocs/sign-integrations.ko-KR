@@ -14,11 +14,11 @@ exl-id: 8b6fa8b4-e240-4ebe-ae2a-8807d75a6c69
 source-git-commit: 2cc0ea55ee7dca3682896c61c85eec29a555339c
 workflow-type: tm+mt
 source-wordcount: '1347'
-ht-degree: 23%
+ht-degree: 0%
 
 ---
 
-# [!DNL Workday]빠른 시작 안내서 {#workday-quick-start-guide}
+# [!DNL Workday] 빠른 시작 안내서{#workday-quick-start-guide}
 
 [**Adobe Sign 지원 문의**](https://www.adobe.com/go/adobesign-support-center)
 
@@ -28,9 +28,9 @@ ht-degree: 23%
 
 * [!UICONTROL 비즈니스 프로세스 프레임워크]
 * 테넌트 설정 및 구성
-* Reporting and [!DNL Workday] Studio Integration
+* 보고 및 [!DNL Workday] Studio 통합
 
-##  내 Adobe Sign 액세스[!DNL Workday] {#access-adobe-sign}
+## Adobe Sign 액세스 [!DNL Workday] {#access-adobe-sign}
 
 [!UICONTROL Adobe Sign 전자 서명 기능] 다음과 같이 표시됩니다. [!UICONTROL 문서 검토 단계] 내부 작업 [!UICONTROL 비즈니스 프로세스 프레임워크(BPF)] 및 을 문서 배포 작업으로 추가합니다.
 
@@ -38,43 +38,43 @@ ht-degree: 23%
 
 Adobe Sign [!DNL Workday] 을(를) 통해 [!UICONTROL 문서 검토 단계] 400개 이상의 비즈니스 프로세스에 [!DNL Workday], 포함 [!UICONTROL 혜택], [!UICONTROL 문서 및 작업 배포], [!UICONTROL 보상 제안]등의 세부 정보가 포함되어 있습니다.
 
-You may refer to the [[!DNL Workday] community articles on [!UICONTROL Review Document Step]](https://doc.workday.com/#/reader/3DMnG~27o049IYFWETFtTQ/TboWWKQemecNipWgxLAjqg).
+자세한 내용은 [[!DNL Workday] 커뮤니티 문서 [!UICONTROL 문서 검토 단계]](https://doc.workday.com/#/reader/3DMnG~27o049IYFWETFtTQ/TboWWKQemecNipWgxLAjqg).
 
-There is a 1:1 relationship between [!UICONTROL [!UICONTROL Review Document Step]s] and billable transactions with Adobe Sign. 여러 문서를 단일 문서 내에서 결합할 수 있습니다 [!UICONTROL 문서 검토 단계] 서명을 위한 단일 패키지로 표시됩니다.
+1:1 관계가 있습니다 [!UICONTROL [!UICONTROL 문서 검토 단계]s] 및 Adobe Sign으로 청구 가능한 트랜잭션 여러 문서를 단일 문서 내에서 결합할 수 있습니다 [!UICONTROL 문서 검토 단계] 서명을 위한 단일 패키지로 표시됩니다.
 
 **참고**: 단일 *동적* 특정 문서에서 참조할 수 있습니다. [!UICONTROL 문서 검토 단계].
 
-To define a functional [!UICONTROL Review Document Step]:
+기능 정의 [!UICONTROL 문서 검토 단계]:
 
 1. 삽입 [!UICONTROL 문서 검토 단계].
 1. 다음에 대해 조치를 취할 수 있는 그룹(역할) 지정 [!UICONTROL 문서 검토 단계].
 
 ![비즈니스 프로세스 단계](images/insert-review-doc-steptornm-575.png)
 
-To configure the [!UICONTROL Review Document Step]:
+를 구성하려면 [!UICONTROL 문서 검토 단계]:
 
 1. 다음을 지정합니다. *[!UICONTROL eSignature 통합 유형]* 만큼 *[!UICONTROL Adobe 전자 서명]*.
 
-1. 서명 격자에 행 추가.
+1. 서명 표에 행을 추가합니다.
 
-   * 서명 격자는 서명을 받으러 문서가 라우팅되는 순차적인 순서를 지정합니다. 각 행에 한 개 이상의 역할을 지정할 수 있고 각 행이 서명 프로세스의 한 단계를 나타냅니다..
+   * 서명 격자는 서명을 받기 위해 문서가 라우팅되는 일련 순서를 지정합니다. 각 행은 하나 이상의 역할을 포함할 수 있으며 각 행은 서명 프로세스의 단계를 나타냅니다.
    * 특정 단계 내에서 역할의 모든 구성원에게 서명 이벤트가 보류 중임을 알립니다.
    * 역할의 한 사람이 서명하면 행 단계가 완료되고 문서가 다음 행 단계로 이동합니다.
    * 모든 행에 서명된 경우 [!UICONTROL 문서 검토 단계] 이(가) 완료되었습니다.
 
-1. 서명받을 문서를 지정합니다. 문서가 [!UICONTROL BP 제공]문서 생성 단계에서 사용할 수 있습니다. 그렇지 않은 경우 기존 문서 또는 보고서를 선택하십시오.
+1. 서명할 문서를 지정합니다. 문서가 [!UICONTROL BP 제공]문서 생성 단계에서 사용할 수 있습니다. 그렇지 않으면 기존 문서나 보고서를 선택합니다.
 
-1. 필요한 만큼 문서가 생길 때까지 3단계를 반복합니다..
+1. 필요한 만큼 문서에 대해 3단계를 반복합니다.
 
    ![문서 검토 단계 구성](images/configure-rd-stepsmaller-575.png)
 
 1. 선택적으로 &#39;서명 거절&#39; 동작을 캡처하려면 &#39;사용자 리디렉션&#39;을 추가합니다. 사용자가 거절하면 [!DNL Workday] 검토를 위해 문서를 구성된 보안 그룹으로 리디렉션합니다.
 
-From the related actions menu of a [!UICONTROL Review Document Step], select **[!UICONTROL Business Process]** > **[!UICONTROL Maintain Redirect]**. 다음 중 하나를 선택합니다.
+의 관련 작업 메뉴에서 [!UICONTROL 문서 검토 단계], 선택 **[!UICONTROL 비즈니스 프로세스]** > **[!UICONTROL 리디렉션 유지]**. 다음 중 하나를 선택합니다.
 
-* **[!UICONTROL Send Back]**: To enable security group members to send a step back to a prior step in the business process. 비즈니스 프로세스가 해당 단계에서 다시 시작됩니다.
+* **[!UICONTROL 뒤로 보내기]**: 보안 그룹 구성원이 비즈니스 프로세스에서 한 단계를 이전 단계로 되돌려 보낼 수 있도록 합니다. 해당 단계에서 비즈니스 프로세스가 다시 시작됩니다.
 * **[!UICONTROL 다음 단계로 이동]**: 보안 그룹 구성원이 비즈니스 프로세스에서 한 단계를 다음 단계로 보낼 수 있도록 합니다.
-* **[!UICONTROL 보안 그룹]**: 비즈니스 프로세스 플로우에서 단계를 리디렉션하려면 Security groups that display at this prompt are selected in the business process security policy in the Redirect section.
+* **[!UICONTROL 보안 그룹]**: 비즈니스 프로세스 플로우에서 단계를 리디렉션하려면 이 프롬프트에 표시되는 보안 그룹은 리디렉션 섹션의 비즈니스 프로세스 보안 정책에서 선택됩니다.
 
 ## 비즈니스 프로세스 단계 참고 사항 {#business-process-step-notes}
 
@@ -86,7 +86,7 @@ From the related actions menu of a [!UICONTROL Review Document Step], select **[
 
 * 비즈니스 프로세스의 모든 단계는 순차적으로 실행됩니다.
 
-   순서 값을 변경하여 단계의 순서를 변경할 수 있습니다. For instance, to insert a step between items “c” and “d”, specify a new item as “ca”.
+   순서 값을 변경하여 단계의 순서를 변경할 수 있습니다. 예를 들어 항목 &quot;c&quot;와 &quot;d&quot; 사이에 단계를 삽입하려면 새 항목을 &quot;ca&quot;로 지정합니다.
 
 ### 예: 제안 {#example-offer}
 
@@ -94,27 +94,27 @@ Offer BP는 [!UICONTROL 직무 지원 동적 BP] 제공 BP를 실행하도록 �
 
 아래 예에서는 [!UICONTROL 문서 검토 단계] 는 북미와 일본에 모두 동적 문서 단계를 사용하고 있습니다.
 
-![[!DNL Workday] 비즈니스 프로세스의 예](images/bp-for-offersmaller-575.png)
+![의 예 [!DNL Workday] 비즈니스 프로세스](images/bp-for-offersmaller-575.png)
 
-이 BP는 다음 작업을 수행합니다.
+이 BP는 다음을 수행합니다.
 
 * BP의 개시자에게 후보자에 대한 보상을 제안하도록 요청한다(단계 b).
 * 단계 조건을 사용하여 현재 국가가 일본이 아닌지 테스트합니다.
 
-   If true, it executes step “ba” which uses an English language document.
+   true이면 영어 문서를 사용하는 &quot;ba&quot; 단계가 실행됩니다.
 
    false인 경우 일본어 문서를 사용하는 &quot;bb&quot; 단계를 실행합니다.
 
-* Defines the signature process in the [!UICONTROL Review Document Step] “bc”.
+* 서명 프로세스를 [!UICONTROL 문서 검토 단계] &quot;bc&quot;
 * 필수 완료 단계 &quot;d&quot;에서 오퍼를 제기할 결정 지점을 정의합니다.
 
-“ba”단계에서 생성되는 동적 문서를 [!UICONTROL 구인 공고(Offer Letter)]라고 하며 [!UICONTROL 긴급 구인(Rapid Offer)]이라고 적힌 텍스트 블록이 1개 포함되어 있습니다. You can add multiple text blocks such as header, salutation, compensation, stock, closing, terms, and more as required.
+&quot;ba&quot; 단계에서 생성되는 동적 문서를 [!UICONTROL 오퍼 레터] 및 에는 [!UICONTROL 신속한 제안]. 필요에 따라 머리글, 인사말, 보상, 스톡, 마감, 용어 등과 같은 여러 텍스트 블록을 추가할 수 있습니다.
 
 ![[!DNL Workday] 문서 페이지 보기](images/offer-letter-575.png)
 
-아래 동적 제안서는 [!DNL Workday] 리치 텍스트 편집기입니다. The items highlighted in *gray* are [!DNL Workday] provided objects that reference contextual data.
+아래 동적 제안서는 [!DNL Workday] 리치 텍스트 편집기입니다. 에서 강조된 항목 *회색* 이 [!DNL Workday] 컨텍스트 데이터를 참조하는 개체를 제공했습니다.
 
-항목 {{brackets}} 이 [Adobe 텍스트 태그](https://adobe.com/go/adobesign_text_tag_guide_kr).
+항목 {{brackets}} 이 [Adobe 텍스트 태그](https://adobe.com/go/adobesign_text_tag_guide).
 
 ![예제 동적 양식](images/script.png)
 
@@ -126,7 +126,7 @@ Offer BP는 [!UICONTROL 직무 지원 동적 BP] 제공 BP를 실행하도록 �
 
 ### 예: 문서 배포 {#example-distribute-documents}
 
-Introduced in [!DNL Workday] 30, the Mass Distribute Documents or Tasks task can be used to send a single document to a large group (&lt;20K) of individual signers. 이 기능은 문서당 단일 서명으로 제한됩니다. 배포 생성은 &#39;[!UICONTROL 문서 또는 작업 배포 만들기]&#39; 작업을 수행할 수 있습니다.
+도입 위치 [!DNL Workday] 30의 경우 문서 또는 작업 대량 배포 작업을 사용하여 하나의 문서를 대규모(2만 미만) 개별 서명자에게 보낼 수 있습니다. 문서당 단일 서명으로 제한됩니다. 배포 생성은 &#39;[!UICONTROL 문서 또는 작업 배포 만들기]&#39; 작업을 수행할 수 있습니다.
 
 예: 직원 지분 선택 양식을 [!UICONTROL 글로벌 모던 서비스]. 원하는 경우 개별 관리자에게 추가로 필터링할 수 있습니다.
 
@@ -136,23 +136,23 @@ Introduced in [!DNL Workday] 30, the Mass Distribute Documents or Tasks task can
 
 ### 예: 보고 {#example-reporting}
 
-[!DNL Workday] has a rich reporting infrastructure. Adobe Sign 프로세스의 세부 사항을 보려면 *문서 검토 이벤트*&#x200B;의 요소를 점검하십시오.
+[!DNL Workday] 다양한 보고 인프라를 갖추고 있습니다. Adobe Sign 프로세스의 세부 사항을 살펴보려면 *문서 검토 이벤트*.
 
-다음은 모든 BP에 걸쳐 Adobe Sign 트랜잭션과 그 상태를 알아보기 위해 실행할 수 있는 간단한 사용자 지정 보고서입니다.
+다음은 모든 BP에서 Adobe Sign 트랜잭션 및 해당 상태를 검색하는 간단한 사용자 정의 보고서입니다.
 
-![[!DNL Workday] 사용자 지정 보고서의 예](images/review-document-eventsmaller-575.png)
+![의 예 [!DNL Workday] 사용자 지정 보고서](images/review-document-eventsmaller-575.png)
 
-아래 보고서는 구현 임차인 내 구인, 입사 및 보상 제안 BP를 보고 생성되었습니다.
+이행 임차인 내의 Offer, Onboarding, Propose Compensation BPs를 살펴보고 다음과 같은 보고서를 생성하였다.
 
-확인 가능한 항목:
+다음을 확인할 수 있습니다.
 
-* 서명을 받으러 발송된 문서
-* 연결된 BP 단계
+* 서명을 위해 전송된 문서
+* 관련 BP 단계
 * 서명 대기 중인 다음 사람
 
-![[!DNL Workday]세 개의 개체를 사용하는 보고서의 예](images/workday-reportsmaller-575.png)
+![의 예 [!DNL Workday] 세 개의 개체를 사용하여 보고](images/workday-reportsmaller-575.png)
 
-## Signed documents {#signed-documents}
+## 서명된 문서 {#signed-documents}
 
 추가 [!DNL Workday] 서명 주기는 Adobe Sign의 모든 전자 메일 알림을 표시하지 않습니다. 사용자는 자신의 작업 내에서 보류 중인 작업에 대해 [!DNL Workday] 받은 편지함입니다.
 
@@ -162,7 +162,7 @@ Introduced in [!DNL Workday] 30, the Mass Distribute Documents or Tasks task can
 
 이내 [!DNL Workday]전체 프로세스 레코드에서 서명된 문서에 액세스할 수 있습니다. 다음과 같은 항목을 찾을 수 있습니다.
 
-* Worker documents on the Worker Profile, and
+* 작업자 프로파일의 작업자 문서
 * 후보 프로필의 후보 문서(제안서).
 
 아래 이미지는 후보 Chris Foxx에 대한 서명된 오퍼 레터를 보여줍니다.
@@ -173,9 +173,9 @@ Introduced in [!DNL Workday] 30, the Mass Distribute Documents or Tasks task can
 
 ### [!DNL Workday] 지원 {#workday-support}
 
-[!DNL Workday] is the integration owner, and should be your first point of contact for questions about the scope of the integration, feature requests, or problems in day to day function of the integration.
+[!DNL Workday] 통합 소유자이며 통합 범위, 기능 요청 또는 통합의 일상적인 기능에 대한 질문에 대한 첫 번째 연락처여야 합니다.
 
-The [!DNL Workday] community has several good articles on how to troubleshoot the integration and generate documents:
+추가 [!DNL Workday] 커뮤니티에는 통합 문제를 해결하고 문서를 생성하는 방법에 대한 몇 가지 유용한 기사가 있습니다.
 
 * [전자 서명 통합 문제 해결](https://doc.workday.com/#/reader/3DMnG~27o049IYFWETFtTQ/zhA~hYllD3Hv1wu0CvHH_g)
 * [문서 검토 단계](https://doc.workday.com/#/reader/3DMnG~27o049IYFWETFtTQ/TboWWKQemecNipWgxLAjqg)
@@ -184,7 +184,7 @@ The [!DNL Workday] community has several good articles on how to troubleshoot th
 
 ### Adobe Sign 지원 {#adobe-sign-support}
 
-Adobe Sign은 통합 파트너로서, 통합 과정에서 서명을 받지 못하거나 대기 중인 서명의 알림에 실패하는 경우에 문의해야 합니다.
+Adobe Sign은 통합 파트너이며, 통합에서 서명을 받지 못하거나 보류 중인 서명 통지에 실패하는 경우 연락해야 합니다.
 
 Adobe Sign 고객은 [!UICONTROL 고객 성공 관리자] 지원합니다. 또는 [!UICONTROL Adobe 기술 지원] 전화로 연결할 수 있습니다. 1-866-318-4100, 제품 목록을 기다린 후 다음을 입력합니다. 4와 2를 차례로 선택합니다(프롬프트에 따라).
 

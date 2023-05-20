@@ -11,14 +11,14 @@ exl-id: 0512f616-568a-4b96-9bd1-48e67bc3536b
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '2354'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 
 # [!DNL SugarCRM] 설치 안내서 {#sugarcrm-install-guide}
 
-[고객 지원 센터에 문의](https://adobe.com/go/adobesign-support-center_kr)
+[고객 지원 센터에 문의](https://adobe.com/go/adobesign-support-center)
 
 Adobe [!DNL EchoSign] 에 [!DNL SugarCRM] 전자 서명 자동화를 제공하는 선도적인 전자 서명 및 웹 계약 솔루션입니다. [!DNL SugarCRM] 전자 서명 및 팩스 서명에 사용됩니다. 사용자는 SugarCRM에서 직접 계약서를 보내고, 계약 내역을 보고, 연결된 계정, 연락처, 견적 등과 함께 전자 서명한 계약서를 저장할 수 있습니다.
 Adobe [!DNL EchoSign] 에 [!DNL SugarCRM] 주문형 또는 온프레미스 솔루션용 6.3 - 6.7을 포함하여 지원되는 모든 버전의 SugarCRM에서 사용할 수 있습니다.

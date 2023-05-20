@@ -11,7 +11,7 @@ exl-id: 378cac01-87c9-4288-8839-482121d49402
 source-git-commit: 568d001a05bd0e642036b4a73067689e987c02ba
 workflow-type: tm+mt
 source-wordcount: '4870'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -84,7 +84,7 @@ Adobe Sign은 OAuth 2.0을 사용하여 내에서 Adobe Sign 계정을 인증합
 
 1. 검색 결과 페이지에서 **보기** 의 경우 *Adobe Sign 구성* 레코드.
 
-   ![Adobe Sign](images/search-for-adobesignconfig.png) 검색
+   ![Adobe Sign 검색](images/search-for-adobesignconfig.png)
 
 1. Adobe Sign 구성 목록 페이지에서 **[!UICONTROL 보기]** 의 경우 *OAuth를 사용하여 Adobe Sign API 액세스* 레코드.
 
@@ -92,7 +92,7 @@ Adobe Sign은 OAuth 2.0을 사용하여 내에서 Adobe Sign 계정을 인증합
 
 1. Adobe Sign 구성 페이지에서 **[!UICONTROL Adobe Sign으로 로그인]**
 
-   ![로그인합니다 ](images/log-in-with-adobesign.png)
+   ![로그인 ](images/log-in-with-adobesign.png)
 
 1. 표시되는 Adobe Sign 로그인 페이지에서 자격 증명을 입력하고 **[!UICONTROL 로그인]**.
 
@@ -135,7 +135,7 @@ Adobe Sign은 OAuth 2.0을 사용하여 내에서 Adobe Sign 계정을 인증합
 >
 >자세한 내용은 [사용자 정의 환경 설정 지정](#configure) 를 참조하십시오.
 
-### 사전 요구 사항 {#prerequisites}
+### 전제 조건 {#prerequisites}
 
 v4.0.4 번들로 업데이트하는 데 필요한 시간은 현재 &#39;서명을 위해 전송됨&#39; 상태가 있는 계약 수에 따라 달라집니다. 일반적으로 100개의 계약을 업데이트하는 데 7~10분이 걸립니다. 업데이트 시간을 예측할 레코드 수를 기록해 두십시오.
 
@@ -243,7 +243,7 @@ Adobe Sign 통합 번들을 사용하면 [!DNL NetSuite] 에서 보낸 계약 �
 
    * SuiteScript 섹션에서 **[!UICONTROL 클라이언트 SuiteScript]** 및 **[!UICONTROL 서버 SuiteScript]** 에 동의해야 합니다.
 
-1. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+1. 선택 **[!UICONTROL 저장]**.
 
    옵션은 이미지에 표시된 대로 설정됩니다.
 
@@ -312,7 +312,7 @@ Adobe Sign 통합 번들은 이미 많은 표준을 사용하여 Adobe Sign 계�
 
    * 및 **[!UICONTROL 대상]** 하위 탭 활성(기본적으로 활성), 액세스 권한을 부여할 특정 역할 또는 사용자를 선택합니다. 모든 역할 및 사용자에게 액세스 권한을 부여하려면 해당 **[!UICONTROL 모두 선택]** 있습니다.
 
-   * **[!UICONTROL 저장]**&#x200B;을 선택합니다. 변경 확인이 표시되면 **[!UICONTROL 돌아가기]**.
+   * 선택 **[!UICONTROL 저장]**. 변경 확인이 표시되면 **[!UICONTROL 돌아가기]**.
 
 
 1. 선택 **[!UICONTROL 목록]** 을 눌러 *스크립트* 목록 페이지를 참조하십시오.
@@ -647,4 +647,4 @@ Quote 를 볼 때 **[!UICONTROL Send for Signature]**. 계약에 첨부된 견�
 
 ## 지원 {#support}
 
-다음으로 이동 [Adobe Sign 지원 포털](https://adobe.com/go/adobesign-support-center_kr) FAQ, 설명서, 기술 자료 문서에 액세스하거나 Adobe 지원에 문의하십시오.
+다음으로 이동 [Adobe Sign 지원 포털](https://adobe.com/go/adobesign-support-center) FAQ, 설명서, 기술 자료 문서에 액세스하거나 Adobe 지원에 문의하십시오.

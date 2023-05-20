@@ -12,14 +12,14 @@ topic: Integrations
 exl-id: 12c91be5-afec-4918-a8fc-ceb33bedf98b
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 6%
+source-wordcount: '819'
+ht-degree: 0%
 
 ---
 
 # [!DNL Coupa] 설치 안내서{#coupa-installation-guide}
 
-[**Adobe Sign 지원 문의**](https://adobe.com/go/adobesign-support-center_kr)
+[**Adobe Sign 지원 문의**](https://adobe.com/go/adobesign-support-center)
 
 ## 개요 {#overview}
 
@@ -45,7 +45,7 @@ Adobe Sign 전용으로 사용 [!DNL Coupa] 조직 내에서 책임자는 다음
 
 Adobe Sign에서 사용자를 만들려면:
 
-1. 계정 관리자로 Adobe Sign에 로그인합니다..
+1. 계정 관리자로 Adobe Sign에 로그인합니다.
 1. 다음으로 이동 **[!UICONTROL 계정]** > **[!UICONTROL 사용자]**.
 1. 새 사용자를 만들려면 ![플러스 아이콘 이미지](images/icon_plus.png) 아이콘을 클릭합니다.
 1. 열리는 대화 상자에서 새 사용자 세부 정보를 입력합니다.
@@ -71,8 +71,8 @@ Adobe Sign에서 사용자를 만들려면:
 1. 전자 메일 주소를 확인하려면 다음을 수행하십시오.
    1. 새 사용자의 전자 메일에 로그인합니다.
    2. &quot;Adobe Sign 시작&quot; 이메일을 찾습니다. 필요한 경우 스팸/정크 폴더를 확인하십시오.
-   3. **[!UICONTROL 암호를 설정하려면 여기를 클릭하십시오]**&#x200B;라고 적힌 부분을 클릭합니다.
-   4. 암호 설정.
+   3. 메시지가 표시된 위치를 클릭합니다. **[!UICONTROL 암호를 설정하려면 여기를 클릭하십시오.]**
+   4. 암호를 설정합니다.
 
    전자 메일 주소를 확인하면 사용자의 상태가 [!UICONTROL 생성됨] 에 [!UICONTROL 활성].
 
@@ -91,7 +91,7 @@ Adobe Sign에서 사용자를 만들려면:
 
 3. 그룹 멤버십 섹션에서 **[!UICONTROL 그룹 관리자]** 및 **[!UICONTROL 전송 가능]** 있습니다.
 4. 선택 취소 **[!UICONTROL 사용자가 계정 관리자입니다.]** 및 **[!UICONTROL 사용자가 문서에 서명할 수 있음]** 있습니다.
-5. **[!UICONTROL 저장]**&#x200B;을 클릭합니다.
+5. 클릭 **[!UICONTROL 저장]**.
 
    ![사용자 설정 이미지](images/user-settings.png)
 
@@ -104,7 +104,7 @@ Adobe Sign에서 사용자를 만들려면:
 1. PDF에 [!DNL Coupa BSM Suite] 인스턴스를 위에서 만든 Adobe Sign 서비스 계정으로 이동합니다.
 1. Adobe Sign Webhook 인스턴스를 만들어 계약 업데이트에 대해 Coupa BSM Suite 인스턴스에 알립니다.
 
-을 연결하는 방법에 대한 자세한 내용은 [!DNL Coupa BSM Suite] webhook 생성 및 등록 방법은 [Adobe Sign Coupa BSM Suite 인스턴스 지원 문서](https://success.coupa.com/Support/Docs/Power_Apps/CLM_Standard/Signing_and_Approvals/Enable_E-Signatures_Through_Adobe_Sign_and_DocuSign){target=&quot;_blank&quot;}.
+을 연결하는 방법에 대한 자세한 내용은 [!DNL Coupa BSM Suite] webhook 생성 및 등록 방법은 [Adobe Sign Coupa BSM Suite 인스턴스 지원 문서](https://success.coupa.com/Support/Docs/Power_Apps/CLM_Standard/Signing_and_Approvals/Enable_E-Signatures_Through_Adobe_Sign_and_DocuSign){target="_blank"}.
 
 ## 만들기 [!DNL Webhook] Adobe Sign {#create-webhook}
 
@@ -136,7 +136,7 @@ Adobe Sign에서 Webhook을 만들려면:
 
 [!DNL Coupa BSM Suite ] 통합 소유자이며 통합 범위, 기능 요청 또는 통합의 일상적인 기능에 대한 질문에 대한 첫 번째 연락처여야 합니다.
 
-질문이 있는 경우 [Coupa 지원](https://success.coupa.com/Support/Welcome_to_Coupa_Support){target=&quot;_blank&quot;}.
+질문이 있는 경우 [Coupa 지원](https://success.coupa.com/Support/Welcome_to_Coupa_Support){target="_blank"}.
 
 ### Adobe Sign 지원 {#adobe-sign-support}
 

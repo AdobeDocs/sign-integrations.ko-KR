@@ -11,7 +11,7 @@ exl-id: b2fa280d-894c-47da-bbf5-8b4d0c6b6165
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '121'
-ht-degree: 26%
+ht-degree: 0%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 26%
     <em>Adobe Sign이 내부에서 작동하도록 구성하는 방법 알아보기 [!DNL Workday] 모든 문서 관리</em>
   </td>
   <td>
-    <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;amp;amp;sort=latest_replies&amp;amp;amp;filter=all">
+    <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all">
     <img alt="Adobe Sign 지원 커뮤니티" src="images/sign-forum.png"/>
     </a>
     <div>
